@@ -23,9 +23,20 @@ Berry I, Soucy J-PR, Tuite A, Fisman D. Open access epidemiologic data and an in
 
 # Order of Reading
 
-- [Looking at Growth Rates]()
-![](/weeklyGrowthFactor.PNG)
-- [Looking at Trends]()
-- [Modeling Trends]()
-- [Comapring Trends]()
+##[Looking at Growth Rates](https://github.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/blob/master/notebooks/GrowthFactor.ipynb)
+![](https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/weeklyGrowthFactor.PNG)
+
+##[Looking at Trends](https://github.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/blob/master/notebooks/TrendLines_fbprophet.ipynb)
+![](https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/trendAnalysis_1.PNG)
+![](https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/trendAnalysis_2.PNG)
+These are the critical dates
+![](https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/criticalDates.PNG)
+
+##[Modeling Trends](https://github.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/blob/master/notebooks/ModelComparison.ipynb)
+![](https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/3PhaseModelComparison.PNG)
+
+
+##[Comapring Trends](https://github.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/blob/master/notebooks/ModelComparison.ipynb)
+![](https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/entireTimeModelComparison.PNG)
+![](https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/modelErrorComparison.png)
 
