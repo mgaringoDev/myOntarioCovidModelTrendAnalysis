@@ -24,6 +24,7 @@ Berry I, Soucy J-PR, Tuite A, Fisman D. Open access epidemiologic data and an in
 # Order of Reading
 
 - [Looking at Growth Rates]()
+![](/weeklyGrowthFactor.PNG)
 - [Looking at Trends]()
 - [Modeling Trends]()
 - [Comapring Trends]()
