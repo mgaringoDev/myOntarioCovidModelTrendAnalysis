@@ -1,8 +1,0 @@
-_site
-_data
-_includes
-_layouts
-_posts
-_configPublish.yml
-node_modules
-Gemfile*
