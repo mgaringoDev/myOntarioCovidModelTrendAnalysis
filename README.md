@@ -1,3 +1,5 @@
+Visit the [project page](https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/) for a more detailed look on how the images below were created. 
+
 # Introduction
 I wanted to get a deeper insight on the current state of things here in Ontario.  This is by no means a comprehensive look at all possible models but only the models that I have come across through my readings.
 
