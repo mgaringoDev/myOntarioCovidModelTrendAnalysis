@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is just a place where I can do some analysis on the COVID data.">
+	<meta property="og:title" content="Epidemic Spread and Variation of Peak Times in Connected Regions Due to Travel-Related Infections---Dynamics of an Antigravity-Type Delay Differential Model" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis//project1/2020/04/22/SIR_EpidemicSpread/" />
+<meta property="og:image" content="/https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/img/home-bg.jpg">
+	
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+<meta name="citation_author" content="Mario Garingo">
+
+
+<meta name="citation_author" content="David Brough">
+
+
+<meta name="citation_author" content="Surya R. Kalidindi">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/favicon.png' />
+
+    <title>Epidemic Spread and Variation of Peak Times in Connected Regions Due to Travel-Related Infections---Dynamics of an Antigravity-Type Delay Differential Model - myOntarioCovidModelTrendAnalysis</title>
+
+    <link rel="canonical" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicSpread/">
+	
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/clean-blog.css">
+	
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/syntax.css">
+
+    <!-- Copy code button CSS-->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/copyButton.css">
+
+    <!-- No Print CSS -->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/noPrint.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/js/clean-blog.min.js "></script>
+	
+	
+	
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75881392-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+	
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/">myOntarioCovidModelTrendAnalysis</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/">Home</a>
+                </li>
+				
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/projects/project1/">Ontario COVID Modeling and Analysis</a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/codes/">Codes</a>
+                </li>
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/documentation/">Documentation</a>
+                </li>
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/search/">Search</a>
+                </li>
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/members/">Members</a>
+                </li>
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/notes/">Notes</a>
+                </li>
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/reporting/">Reporting</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/myTOC.css">
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/img/home-bg.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading" style="padding: 30px 0">
+                    <h2>Epidemic Spread and Variation of Peak Times in Connected Regions Due to Travel-Related Infections---Dynamics of an Antigravity-Type Delay Differential Model</h2>
+                    
+                    <h5>SAIR Model</h5>
+                    
+                    <h6>Posted by Mario Garingo on April 22, 2020</h6>	
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <!-- *****************  floating TOC *****************-->
+    
+    <!-- *****************  floating TOC *****************-->
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <!-- *********************************** Table of Contents *********************************** -->
+<div class="float-left scrollbar" id="style-2" style="overflow:scroll;height: 45%;width:20%;background-color: black;">
+<div class="recentpost" style="padding: 10px; font-size: small;background-color: black;">
+<div class="customTOC" id="inline_toc" style="color:white">
+      <h4 style="color: white;">Table of Contents</h4>
+<ul id="markdown-toc">
+  <li><a href="#extracted-annotations" id="markdown-toc-extracted-annotations">Extracted Annotations</a></li>
+  <li><a href="#ref" id="markdown-toc-ref">Ref</a></li>
+</ul>
+
+    </div>
+</div>
+</div>
+<!-- *********************************** Table of Contents *********************************** -->
+
+<p>This article did a very good job at summarizing the SAIR model, specifically its derivation, motivation and application.</p>
+
+<p>The differential model is as follows:</p>
+
+<script type="math/tex; mode=display">\frac{dS}{dt} = -\alpha S(I+J)</script>
+
+<script type="math/tex; mode=display">\frac{dI}{dt} = \alpha\eta S(I+J) - \beta I</script>
+
+<script type="math/tex; mode=display">\frac{dJ}{dt} = \alpha (1-\eta)S(I+J) - \gamma J</script>
+
+<script type="math/tex; mode=display">\frac{dR}{dt} = \beta I</script>
+
+<script type="math/tex; mode=display">\frac{dU}{dt} = \gamma J</script>
+
+<p>where;</p>
+<ul>
+  <li>susceptibles S(t)</li>
+  <li>symptomatic I(t)</li>
+  <li>asymptomatic J(t)</li>
+  <li>registered removed R(t)</li>
+  <li>unregistered removed U(t)</li>
+  <li>$\alpha$ contact rate</li>
+  <li>$\eta$ probability of passing it to someone</li>
+  <li>$\beta$ removal rate</li>
+  <li>$\gamma$ recovery rate</li>
+</ul>
+
+<h1 id="extracted-annotations">Extracted Annotations</h1>
+
+<p>“The initial estimates were that registered infectives would be between 1/3 and 1/4 of the actual infectives [1]; there have been claims (in the famous speech by the British Government scientific advisers) that this ratio could be as little as 1/10. In a recent contribution [2] Li et al. estimate that 86% of infections remain undetected; in other words only about 1/7 of the infections are detected and can thus be isolated. More recently, other studies have suggested that the fractions of undetected infections could be even higher [3, 4].” (Gaeta 2020:1)</p>
+
+<p>“The goal of this note is two-fold: on the ne hand we want to develop a simple general model to take into account the presence of asymptomatic infectives; on the other hand, we want to apply this to the ongoing COVID-19 epidemic,in particular considering the situation in Italy.” (Gaeta 2020:1)</p>
+
+<p>“he substantially long time these spend being infective and not isolated; this is called A-SIR, the A standing indeed for asymptomatic” (Gaeta 2020:1)</p>
+
+<p>“main interests is in understanding how relevant it can be to uncover asymptomatic infectives and promptly isolate them; we then study (numerically) how the dynamics is affected by a reduction of the infective time-span for this class” (Gaeta 2020:2)</p>
+
+<p>“ull time simulations of the model; these are not so significant, as the effective parameters of the model are and will continue to be changing due to containment measures and public awareness, but this allows us to get an estimate on what would be the epidemic peak and the time span of the epidemic of no actions were taken” (Gaeta 2020:2)</p>
+
+<p>“the model suggests that (if no actions were taken) an overwhelming part of the population will have been in contact with the virus - most of them with no or very little symptoms - so that if permanent immunity is gained by the immune system of infected, and the virus does not mutate too quickly, one would be confident that there will be no second run of COVID in next year” (Gaeta 2020:2)</p>
+
+<p>“restrictive measures are taken into account by a “reduction factor”, and discuss on the one hand how a prompt isolation of asymptomatic infectives would change the dynamics in this framework, and on the other what the time-scale could be in this context” (Gaeta 2020:2)</p>
+
+<p>“We will end the paper by a discussion of some relevant general points and by conclusions; we anticipate here the main ones: (i) there is a marked difference between the standard SIR dynamics and the dynamics of the A-SIR model, i.e. the one taking into account the presence of a large class of asymptomatic infectives; (ii) in the case of the COVID-19 epidemic in Italy, assuming a ratio of symptomatic to total infections of ξ = 1/10 yields a good agreement between the model and epidemiological data.” (Gaeta 2020:2)</p>
+
+<p>“first face a new virus we only know, by definition, the early phase of the dynamics, so parameters should be extracted from such data. (We stress that the parameters depend not only on the pathogen agent, but also on the social structure and organization of the country (e.g. on its population density, restrictive measures, and sanitary system); thus they are different in each country.) We will thus concentrate on this initial phase, with I (t) and R(t) rather small, and try to obtain approximate analytical expressions for the dynamics; the purpose will be to estimate the parameters α and β - and thus also the epidemic threshold γ - in this case” (Gaeta 2020:5)</p>
+
+<p>“large fraction of infected people are actually asymptomatic, but still fully infective, as it appears to be the case for COVID-19” (Gaeta 2020:9)</p>
+
+<p>“he presence of a large population of asymptomatic infectives” (Gaeta 2020:9)</p>
+
+<p>“(i) On the one hand, they are a formidable vehicle of contagion, as they have no reason to take special precautions, and get in contact with a number of people which themselves do not take the due precautions (which would be taken in the case of an individual with evident symptoms);” (Gaeta 2020:9)</p>
+
+<p>“(ii) On the other hand, assuming once the infection is ceased they have acquired permanent immunity, they contribute to group immunity reached once the population of susceptibles falls below the epidemic threshold.” (Gaeta 2020:9)</p>
+
+<p>“infective people are either symptomatic or asymptomatic. A more refined subdivision of their state would be more realistic” (Gaeta 2020:10)</p>
+
+<p>“assume permanent immunity of individuals who have been infected and recovered, and constant population” (Gaeta 2020:10)</p>
+
+<p>“We will have susceptibles S (t) in a unique class, but two classes of infected and infective people: symptomatic I (t) and asymptomatic J (t); and similarly two classes of removed people: registered removed R(t) and unregistered removed (those who were passing unnoticed through the infection) U (t)” (Gaeta 2020:10)</p>
+
+<p>“In the case of COVID-19, it is known that the incubation time is about 5.1 days; assuming that symptomatic infection is promptly recognized and swiftly treated, epidemiological and clinical data suggest the approximate values (note that asymptomatic removal time η−1 includes both the incubation time and the healing time) β −1 ≃ 5 − 7, η−1 ≃ 14 − 21 for the removal and recovery rates; the value of ξ is more controversial, as mentioned in the Introduction” (Gaeta 2020:11)</p>
+
+<h1 id="ref">Ref</h1>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>G. Gaeta, “A simple SIR model with a large set of asymptomatic infectives,” arXiv:2003.08720 [q-bio], Apr. 2020, Accessed: Apr. 16, 2020. [Online]. Available: http://arxiv.org/abs/2003.08720.
+</code></pre></div></div>
+
+
+            
+<div id="pdf">
+   <h1>PDF</h1>
+   <a href="https://drive.google.com/file/d/1vQNWJy6B6YQVL1Kjo54hpyg9bgW9pcZu/preview">View It Here</a>
+   <object data="https://drive.google.com/file/d/1vQNWJy6B6YQVL1Kjo54hpyg9bgW9pcZu/preview"  width="750px" height="750px">
+      <iframe src="https://drive.google.com/file/d/1vQNWJy6B6YQVL1Kjo54hpyg9bgW9pcZu/preview" >
+         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://drive.google.com/file/d/1vQNWJy6B6YQVL1Kjo54hpyg9bgW9pcZu/preview">Download PDF</a>.</p>
+      </iframe>
+   </object>
+<div>    
+   
+               
+            
+            
+
+                              
+
+
+        </div>
+    </div>
+</div>
+
+<script src="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/js/clipboard.min.js"></script>
+<script src="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/js/copy.js"></script>
+
+<hr>
+
+	
+    <!-- Footer -->
+<footer>
+   <div class="container">
+      <div class="row no-print">
+         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <ul class="list-inline text-center">
+               <!-- Research Gate Stuff -->
+               
+               <li>
+                  <a href="https://www.researchgate.net/profile/Mario_Garingo">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-researchgate fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+               </li>
+               
+               <!-- Other Project Site stuff -->
+               
+               <li>
+                  <a href="http://youeeg.net/mgProjectPages/">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+               </li>
+               
+               <!-- Github Stuff stuff -->
+               
+               <li>
+                  <a href="https://github.com/mgaringoDev/myOntarioCovidModelTrendAnalysis">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+               </li>
+               
+               <!-- Github Stuff stuff -->
+               
+               <li>
+                  <a href="https://mgaringodev.github.io/">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+               </li>
+               
+            </ul>
+            <p class="copyright text-muted"> Copyright © <a href="https://mgaringodev.github.io/" target="_blank">Mario Garingo</a>, 2020. </p>
+         </div>
+      </div>
+   </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>myOntarioCovidModelTrendAnalysis</title>
+    <description>This is just a place where I can do some analysis on the COVID data.</description>
+    <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/</link>
+    <atom:link href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 22 Apr 2020 19:50:13 -0400</pubDate>
+    <lastBuildDate>Wed, 22 Apr 2020 19:50:13 -0400</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Epidemic Modeling 101 Or why your CoVID-19 exponential ts are wrong</title>
+        <description>This was a Medium article but it has very interesting information regarding the possible pitfalls of various models.  I mostly agree with what he is saying, specifically that we need to take these models with a grain of sand and use them as a way of shifting priorities rather than using them as a be all end all set in stone prediction of what is to come.
+
+Ref
+
+B. Gonçalves, “Epidemic Modeling 101: Or why your CoVID-19 exponential ts are wrong,” p. 22.
+
+
+</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_WhyExponentialModelsAreWrong/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_WhyExponentialModelsAreWrong/</guid>
+        
+        <category>litReview</category>
+        
+        <category>model</category>
+        
+        <category>SIR</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Epidemics on Networks I</title>
+        <description>
+
+
+
+      Table of Contents
+
+  Ref
+
+
+    
+
+
+
+
+This is a pretty good lecture on the basics of epidemics and network analysis.  Check the attached PDF for more notes.
+
+Ref
+Check this YouTube video for the entire lecture.
+L. E. Zhukov, “Epidemics on Networks I,” p. 30.
+
+
+</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicsOnNetworks01/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicsOnNetworks01/</guid>
+        
+        <category>litReview</category>
+        
+        <category>model</category>
+        
+        <category>SIR</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Epidemic Spread and Variation of Peak Times in Connected Regions Due to Travel-Related Infections---Dynamics of an Antigravity-Type Delay Differential Model</title>
+        <description>
+
+
+
+      Table of Contents
+
+  Extracted Annotations
+  Ref
+
+
+    
+
+
+
+
+This article did a very good job at summarizing the SAIR model, specifically its derivation, motivation and application.
+
+The differential model is as follows:
+
+
+
+
+
+
+
+
+
+
+
+where;
+
+  susceptibles S(t)
+  symptomatic I(t)
+  asymptomatic J(t)
+  registered removed R(t)
+  unregistered removed U(t)
+  $\alpha$ contact rate
+  $\eta$ probability of passing it to someone
+  $\beta$ removal rate
+  $\gamma$ recovery rate
+
+
+Extracted Annotations
+
+“The initial estimates were that registered infectives would be between 1/3 and 1/4 of the actual infectives [1]; there have been claims (in the famous speech by the British Government scientific advisers) that this ratio could be as little as 1/10. In a recent contribution [2] Li et al. estimate that 86% of infections remain undetected; in other words only about 1/7 of the infections are detected and can thus be isolated. More recently, other studies have suggested that the fractions of undetected infections could be even higher [3, 4].” (Gaeta 2020:1)
+
+“The goal of this note is two-fold: on the ne hand we want to develop a simple general model to take into account the presence of asymptomatic infectives; on the other hand, we want to apply this to the ongoing COVID-19 epidemic,in particular considering the situation in Italy.” (Gaeta 2020:1)
+
+“he substantially long time these spend being infective and not isolated; this is called A-SIR, the A standing indeed for asymptomatic” (Gaeta 2020:1)
+
+“main interests is in understanding how relevant it can be to uncover asymptomatic infectives and promptly isolate them; we then study (numerically) how the dynamics is affected by a reduction of the infective time-span for this class” (Gaeta 2020:2)
+
+“ull time simulations of the model; these are not so significant, as the effective parameters of the model are and will continue to be changing due to containment measures and public awareness, but this allows us to get an estimate on what would be the epidemic peak and the time span of the epidemic of no actions were taken” (Gaeta 2020:2)
+
+“the model suggests that (if no actions were taken) an overwhelming part of the population will have been in contact with the virus - most of them with no or very little symptoms - so that if permanent immunity is gained by the immune system of infected, and the virus does not mutate too quickly, one would be confident that there will be no second run of COVID in next year” (Gaeta 2020:2)
+
+“restrictive measures are taken into account by a “reduction factor”, and discuss on the one hand how a prompt isolation of asymptomatic infectives would change the dynamics in this framework, and on the other what the time-scale could be in this context” (Gaeta 2020:2)
+
+“We will end the paper by a discussion of some relevant general points and by conclusions; we anticipate here the main ones: (i) there is a marked difference between the standard SIR dynamics and the dynamics of the A-SIR model, i.e. the one taking into account the presence of a large class of asymptomatic infectives; (ii) in the case of the COVID-19 epidemic in Italy, assuming a ratio of symptomatic to total infections of ξ = 1/10 yields a good agreement between the model and epidemiological data.” (Gaeta 2020:2)
+
+“first face a new virus we only know, by definition, the early phase of the dynamics, so parameters should be extracted from such data. (We stress that the parameters depend not only on the pathogen agent, but also on the social structure and organization of the country (e.g. on its population density, restrictive measures, and sanitary system); thus they are different in each country.) We will thus concentrate on this initial phase, with I (t) and R(t) rather small, and try to obtain approximate analytical expressions for the dynamics; the purpose will be to estimate the parameters α and β - and thus also the epidemic threshold γ - in this case” (Gaeta 2020:5)
+
+“large fraction of infected people are actually asymptomatic, but still fully infective, as it appears to be the case for COVID-19” (Gaeta 2020:9)
+
+“he presence of a large population of asymptomatic infectives” (Gaeta 2020:9)
+
+“(i) On the one hand, they are a formidable vehicle of contagion, as they have no reason to take special precautions, and get in contact with a number of people which themselves do not take the due precautions (which would be taken in the case of an individual with evident symptoms);” (Gaeta 2020:9)
+
+“(ii) On the other hand, assuming once the infection is ceased they have acquired permanent immunity, they contribute to group immunity reached once the population of susceptibles falls below the epidemic threshold.” (Gaeta 2020:9)
+
+“infective people are either symptomatic or asymptomatic. A more refined subdivision of their state would be more realistic” (Gaeta 2020:10)
+
+“assume permanent immunity of individuals who have been infected and recovered, and constant population” (Gaeta 2020:10)
+
+“We will have susceptibles S (t) in a unique class, but two classes of infected and infective people: symptomatic I (t) and asymptomatic J (t); and similarly two classes of removed people: registered removed R(t) and unregistered removed (those who were passing unnoticed through the infection) U (t)” (Gaeta 2020:10)
+
+“In the case of COVID-19, it is known that the incubation time is about 5.1 days; assuming that symptomatic infection is promptly recognized and swiftly treated, epidemiological and clinical data suggest the approximate values (note that asymptomatic removal time η−1 includes both the incubation time and the healing time) β −1 ≃ 5 − 7, η−1 ≃ 14 − 21 for the removal and recovery rates; the value of ξ is more controversial, as mentioned in the Introduction” (Gaeta 2020:11)
+
+Ref
+
+G. Gaeta, “A simple SIR model with a large set of asymptomatic infectives,” arXiv:2003.08720 [q-bio], Apr. 2020, Accessed: Apr. 16, 2020. [Online]. Available: http://arxiv.org/abs/2003.08720.
+
+</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicSpread/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicSpread/</guid>
+        
+        <category>litReview</category>
+        
+        <category>model</category>
+        
+        <category>SAIR</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>A contribution to the mathematical theory of epidemics</title>
+        <description>
+
+
+
+      Table of Contents
+
+  Introduction
+  Solving Differential Equations
+  Ref
+
+
+    
+
+
+
+
+Introduction
+The simplest model and the foundation of many other models is the SIR model.
+
+  S: Suseptible
+  I: Infectious
+  R: Recovered
+
+
+Note that R can be either people that have recovered from the disease or also people that have died.  This model does not differentiate the two states but later on we can look at how we can extend this model using the SIRm model where m incorporates the people that have passed away.
+
+You can think of these models as a network model where each node consists of the compartments and the edges from each node corresponds to a rate in which activity from one node to other occurs.  These variables (S, I, and R) represent the number of people in each compartment at a particular time. To represent that the number of susceptible, infected and recovered individuals may vary over time (even if the total population size remains constant), we make the precise numbers a function of t (time): S(t), I(t) and R(t).
+$\beta$ is the rate at which S becomes I and $\gamma$ is the rate at which I becomes R.
+
+
+
+graph LR
+    S--&amp;gt;|beta|I
+    I--&amp;gt;|gamma|R
+
+    ODE --&amp;gt; Parameter 
+    Parameter  --&amp;gt; Model
+    Model --&amp;gt; Prediction
+
+
+As implied by the variable function of t, the model is dynamic in that the numbers in each compartment may fluctuate over time. During an epidemic, the number of susceptible individuals falls rapidly as more of them are infected and thus enter the infectious and recovered compartments. The disease cannot break out again until the number of susceptibles has built back up, e.g. as a result of offspring being born into the susceptible compartment.
+
+Solving Differential Equations
+NOTE: I will only do this once as all differential equations are solved the same way.
+Recall:
+
+The model is defined as:
+
+Note that we normalize everything by the population.
+
+Next we take the partial derivative of this equation wrt to time, and it will give us 3 rates of change.
+
+
+
+
+
+
+
+There are several key observations we can take from this:
+
+  The rate at which the number of suspected people decrease because of the rate of infection.  As time progresses there is a small amount of people in the population that can be infected.
+  The rate at which the number of infected people increase due to the previous term and decrease based on the number of recovered people.
+
+
+There is no analytical solution for this so simulations are run.
+
+One way to use this model is to estimate the hyper-parameters, in this case $\beta$ and $\gamma$, based on real world data I and then simulate to identify S and R respectively.  This will also enable us to do some forecasting because after all parameters have been identified you only have to integrate across time.
+
+This will be our strategy for implementation.  This will be a good time to practice optimization techniques to reduce some cost function.  Basically to identify the parameters we need to reduce some cost funtion such that $\hat{y}$ is as close to $y$ as possible.  See the flowchart above.
+
+Ref
+W. O. Kermack and A. G. McKendrick, “A contribution to the mathematical theory of epidemics,” Proceedings of the royal society of london. Series A, Containing papers of a mathematical and physical character, vol. 115, no. 772, pp. 700–721, 1927.
+
+
+</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_AContributionToTheMathematicalTheoryOfEpidemics/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_AContributionToTheMathematicalTheoryOfEpidemics/</guid>
+        
+        <category>litReview</category>
+        
+        <category>model</category>
+        
+        <category>SIR</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Random Modelling of Contagious Social and Infectious Diseases</title>
+        <description>
+
+
+
+      Table of Contents
+
+  Extracted Annotations
+  Ref
+
+
+    
+
+
+
+
+Good overview of other mathematical models.  Doesn’t go into derivation but simple to follow after reading other papers of modeling and differential equations.
+
+
+
+Extracted Annotations
+Extracted Annotations (4/22/2020, 3:07:26 PM)
+
+“Random Multi-group SIGR Model” (Demongeot et al 2012:1159)
+
+“Susceptible contains persons likely to have disease” (Demongeot et al 2012:1159)
+
+“second compartment contains Infected” (Demongeot et al 2012:1159)
+
+“last compartment is revealed to the recovered people” (Demongeot et al 2012:1159)
+
+“third compartment, there is people Infectious with, e.g., gametocytæmia that is to say, people who are contagious” (Demongeot et al 2012:1159)
+
+“Table 1 Definition of the parameters used in the system 
+bkj: transmission coefficients between compartments Sk and Gj 
+dkS : natural-death rate in the k-th group of the S compartment 
+dk : natural-death rate in the k-th group of the I compartment 
+dkG : natural-death rate in the k-th group of the G compartment 
+dkR : natural-death rate in the k-th group of the R compartment 
+ek: disease-caused death rate in the k-th group of the I compartment 
+xk: disease-caused death rate in the k-th group of the R compartment 
+Kk: influx of new individuals in the k-th group 
+pk: fraction of new individuals in the k-th group 
+hk: fraction of vaccine individuals in the k-th group
+gk: rate at which an infected becomes infectious in the k-th group 
+ck: recovery rate of individuals in the k-th group” (Demongeot et al 2012:1160)
+
+Ref
+
+J. Demongeot, O. Hansen, A. S. Jannot, and C. Taramasco, “Random Modelling of Contagious (Social and Infectious) Diseases: Examples of Obesity and HIV and Perspectives Using Social Networks,” in 2012 26th International Conference on Advanced Information Networking and Applications Workshops, Fukuoka, Japan, Mar. 2012, pp. 1153–1160, doi: 10.1109/WAINA.2012.173.
+
+
+</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SGIR_RandomModellingOfContagiousSocialAndInfectiousDiseases/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SGIR_RandomModellingOfContagiousSocialAndInfectiousDiseases/</guid>
+        
+        <category>litReview</category>
+        
+        <category>model</category>
+        
+        <category>SIGR</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Global stability for the SEIR model in epidemiology</title>
+        <description>
+
+
+
+      Table of Contents
+
+  Extracted Annotations
+  Ref
+
+
+    
+
+
+
+
+May not use this model because it doesn’t really fit with what we are seeing in COVID but let us implement it anyways because it is fairly simple.
+
+
+
+Extracted Annotations
+
+Ref
+
+M. Y. Li and J. S. Muldowney, “Global stability for the SEIR model in epidemiology,” Mathematical biosciences, vol. 125, no. 2, pp. 155–164, 1995.
+
+
+</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SEIR_GlobalStabilityForTheSEIRModelInEpidemiology/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SEIR_GlobalStabilityForTheSEIRModelInEpidemiology/</guid>
+        
+        <category>litReview</category>
+        
+        <category>model</category>
+        
+        <category>SEIR</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Testing Modeling Assumptions in the West Africa Ebola Outbreak</title>
+        <description>
+
+
+
+      Table of Contents
+
+  Extracted Annotations
+  Ref
+
+
+    
+
+
+
+
+Overall very simple to read and follow.  They show that simple models can sometimes give adequite results and give guidance of what to do next.
+
+
+
+
+
+
+
+where a is the infectious rate and $\beta$ is the recovery rate.  Notice that the infectious rate is a function as the model states assumes decreasingly infectious.
+
+Extracted Annotations
+
+“In the SI model, 100% of individuals are eventually infected, therefore, to find agreement with data, our model has to assume a small proportion of individuals in each division are susceptible to the disease.” (Burghardt et al 2016:34601)
+
+“more likely, all individuals are susceptible and, as they become aware of an infection, they reduce their interactions or otherwise reduce the overall disease transmissibility.” (Burghardt et al 2016:34601)
+
+“disease model, in which susceptible (s) individuals can become infected (i), but then recover or are removed” (Burghardt et al 2016:34602)
+
+“SDIR” (Burghardt et al 2016:34602)
+
+“all individuals who recovered or died were assumed to be “removed”. The SIR model, like the SI model, significantly overshoots the cumulative number of cases in the absence of intervention. We counter-balance this effect with an exponentially decreasing disease transmissibility as a result of public health interventions18,19. We call this model the Susceptible - Decreasingly Infectious - Recovered (SDIR) model.” (Burghardt et al 2016:34602)
+
+Ref
+
+[1]K. Burghardt, C. Verzijl, J. Huang, M. Ingram, B. Song, and M.-P. Hasne, “Testing Modeling Assumptions in the West Africa Ebola Outbreak,” Sci Rep, vol. 6, no. 1, p. 34598, Dec. 2016, doi: 10.1038/srep34598.
+
+
+</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SDIR_TestingModelingAssumptionsInTheWestAfricaEbolaOutbreak/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SDIR_TestingModelingAssumptionsInTheWestAfricaEbolaOutbreak/</guid>
+        
+        <category>litReview</category>
+        
+        <category>model</category>
+        
+        <category>SDIR</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Influenza models with Wolfram Mathematica</title>
+        <description>
+
+
+
+      Table of Contents
+
+  Ref
+
+
+    
+
+
+
+
+Look at the following to setup the differential equations.  The article is basically like a tutorial on how to implement various things in R.  But we can use the images below to help us create a differential equation in python.
+
+
+
+
+Ref
+
+D. H. Knipl and G. Röst, “Influenza models with Wolfram Mathematica,” p. 22.
+
+</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/InfluenzaModelsWithWolframMathematica/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/InfluenzaModelsWithWolframMathematica/</guid>
+        
+        <category>litReview</category>
+        
+        <category>model</category>
+        
+        <category>SEAIR</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Jekyll Site Creation</title>
+        <description>Run the following code in the command line.
+
+jekyll build --config &quot;_configPublish.yml&quot;
+
+
+NOTE: When running this the first time you need to change the _configPublish.yml file
+
+  destination: change the project folder in github folder.
+  baseurl: change the project page github pages website location.
+
+</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/CreatingSite/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/CreatingSite/</guid>
+        
+        <category>addNew</category>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Licensing Template</title>
+        <description>You need to add the following licensing and copyright statement at the top of all codes.
+
+Copyright (C) yyyy  Mario Garingo
+mg.mydev@gmail.com
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+</description>
+        <pubDate>Tue, 21 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/Licensing/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/Licensing/</guid>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+  </channel>
+</rss>
