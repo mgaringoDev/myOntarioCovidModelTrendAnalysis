@@ -3,10 +3,10 @@
   <channel>
     <title>Title Project</title>
     <description>Project Descriptions</description>
-    <link>http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/</link>
-    <atom:link href="http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 22 Apr 2020 17:49:52 -0400</pubDate>
-    <lastBuildDate>Wed, 22 Apr 2020 17:49:52 -0400</lastBuildDate>
+    <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/</link>
+    <atom:link href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 22 Apr 2020 18:01:50 -0400</pubDate>
+    <lastBuildDate>Wed, 22 Apr 2020 18:01:50 -0400</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -20,8 +20,8 @@ B. Gonçalves, “Epidemic Modeling 101: Or why your CoVID-19 exponential ts are
 
 </description>
         <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_WhyExponentialModelsAreWrong/</link>
-        <guid isPermaLink="true">http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_WhyExponentialModelsAreWrong/</guid>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_WhyExponentialModelsAreWrong/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_WhyExponentialModelsAreWrong/</guid>
         
         <category>litReview</category>
         
@@ -59,8 +59,8 @@ L. E. Zhukov, “Epidemics on Networks I,” p. 30.
 
 </description>
         <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicsOnNetworks01/</link>
-        <guid isPermaLink="true">http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicsOnNetworks01/</guid>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicsOnNetworks01/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicsOnNetworks01/</guid>
         
         <category>litReview</category>
         
@@ -159,8 +159,8 @@ G. Gaeta, “A simple SIR model with a large set of asymptomatic infectives,” 
 
 </description>
         <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicSpread/</link>
-        <guid isPermaLink="true">http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicSpread/</guid>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicSpread/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_EpidemicSpread/</guid>
         
         <category>litReview</category>
         
@@ -251,8 +251,8 @@ W. O. Kermack and A. G. McKendrick, “A contribution to the mathematical theory
 
 </description>
         <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_AContributionToTheMathematicalTheoryOfEpidemics/</link>
-        <guid isPermaLink="true">http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_AContributionToTheMathematicalTheoryOfEpidemics/</guid>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_AContributionToTheMathematicalTheoryOfEpidemics/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_AContributionToTheMathematicalTheoryOfEpidemics/</guid>
         
         <category>litReview</category>
         
@@ -320,8 +320,8 @@ J. Demongeot, O. Hansen, A. S. Jannot, and C. Taramasco, “Random Modelling of 
 
 </description>
         <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SGIR_RandomModellingOfContagiousSocialAndInfectiousDiseases/</link>
-        <guid isPermaLink="true">http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SGIR_RandomModellingOfContagiousSocialAndInfectiousDiseases/</guid>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SGIR_RandomModellingOfContagiousSocialAndInfectiousDiseases/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SGIR_RandomModellingOfContagiousSocialAndInfectiousDiseases/</guid>
         
         <category>litReview</category>
         
@@ -364,8 +364,8 @@ M. Y. Li and J. S. Muldowney, “Global stability for the SEIR model in epidemio
 
 </description>
         <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SEIR_GlobalStabilityForTheSEIRModelInEpidemiology/</link>
-        <guid isPermaLink="true">http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SEIR_GlobalStabilityForTheSEIRModelInEpidemiology/</guid>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SEIR_GlobalStabilityForTheSEIRModelInEpidemiology/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SEIR_GlobalStabilityForTheSEIRModelInEpidemiology/</guid>
         
         <category>litReview</category>
         
@@ -424,8 +424,8 @@ Ref
 
 </description>
         <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SDIR_TestingModelingAssumptionsInTheWestAfricaEbolaOutbreak/</link>
-        <guid isPermaLink="true">http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SDIR_TestingModelingAssumptionsInTheWestAfricaEbolaOutbreak/</guid>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SDIR_TestingModelingAssumptionsInTheWestAfricaEbolaOutbreak/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SDIR_TestingModelingAssumptionsInTheWestAfricaEbolaOutbreak/</guid>
         
         <category>litReview</category>
         
@@ -465,8 +465,8 @@ D. H. Knipl and G. Röst, “Influenza models with Wolfram Mathematica,” p. 22
 
 </description>
         <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/InfluenzaModelsWithWolframMathematica/</link>
-        <guid isPermaLink="true">http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/InfluenzaModelsWithWolframMathematica/</guid>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/InfluenzaModelsWithWolframMathematica/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/InfluenzaModelsWithWolframMathematica/</guid>
         
         <category>litReview</category>
         
@@ -502,8 +502,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 </description>
         <pubDate>Tue, 21 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/Licensing/</link>
-        <guid isPermaLink="true">http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/Licensing/</guid>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/Licensing/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/Licensing/</guid>
         
         <category>docs</category>
         
@@ -563,8 +563,8 @@ if __name__ == &quot;__main__&quot;:
 
 </description>
         <pubDate>Tue, 21 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/ExportToPDF/</link>
-        <guid isPermaLink="true">http://localhost:4000https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/ExportToPDF/</guid>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/ExportToPDF/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/ExportToPDF/</guid>
         
         <category>docs</category>
         
