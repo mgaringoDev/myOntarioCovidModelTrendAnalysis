@@ -1,0 +1,379 @@
+{
+  
+
+    "project1-2020-04-22-sir-whyexponentialmodelsarewrong": {
+      "title": "Epidemic Modeling 101 Or why your CoVID-19 exponential ts are wrong",
+      "content"	 : "This was a Medium article but it has very interesting information regarding the possible pitfalls of various models.  I mostly agree with what he is saying, specifically that we need to take these models with a grain of sand and use them as a way of shifting priorities rather than using them as a be all end all set in stone prediction of what is to come.RefB. Gonçalves, “Epidemic Modeling 101: Or why your CoVID-19 exponential ts are wrong,” p. 22.",
+      "url": "/project1/2020/04/22/SIR_WhyExponentialModelsAreWrong/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-22-sir-epidemicsonnetworks01": {
+      "title": "Epidemics on Networks I",
+      "content"	 : "      Table of Contents  Ref    This is a pretty good lecture on the basics of epidemics and network analysis.  Check the attached PDF for more notes.RefCheck this YouTube video for the entire lecture.L. E. Zhukov, “Epidemics on Networks I,” p. 30.",
+      "url": "/project1/2020/04/22/SIR_EpidemicsOnNetworks01/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-22-sir-epidemicspread": {
+      "title": "Epidemic Spread and Variation of Peak Times in Connected Regions Due to Travel-Related Infections---Dynamics of an Antigravity-Type Delay Differential Model",
+      "content"	 : "      Table of Contents  Extracted Annotations  Ref    This article did a very good job at summarizing the SAIR model, specifically its derivation, motivation and application.The differential model is as follows:where;  susceptibles S(t)  symptomatic I(t)  asymptomatic J(t)  registered removed R(t)  unregistered removed U(t)  $alpha$ contact rate  $eta$ probability of passing it to someone  $beta$ removal rate  $gamma$ recovery rateExtracted Annotations“The initial estimates were that registered infectives would be between 1/3 and 1/4 of the actual infectives [1]; there have been claims (in the famous speech by the British Government scientific advisers) that this ratio could be as little as 1/10. In a recent contribution [2] Li et al. estimate that 86% of infections remain undetected; in other words only about 1/7 of the infections are detected and can thus be isolated. More recently, other studies have suggested that the fractions of undetected infections could be even higher [3, 4].” (Gaeta 2020:1)“The goal of this note is two-fold: on the ne hand we want to develop a simple general model to take into account the presence of asymptomatic infectives; on the other hand, we want to apply this to the ongoing COVID-19 epidemic,in particular considering the situation in Italy.” (Gaeta 2020:1)“he substantially long time these spend being infective and not isolated; this is called A-SIR, the A standing indeed for asymptomatic” (Gaeta 2020:1)“main interests is in understanding how relevant it can be to uncover asymptomatic infectives and promptly isolate them; we then study (numerically) how the dynamics is affected by a reduction of the infective time-span for this class” (Gaeta 2020:2)“ull time simulations of the model; these are not so significant, as the effective parameters of the model are and will continue to be changing due to containment measures and public awareness, but this allows us to get an estimate on what would be the epidemic peak and the time span of the epidemic of no actions were taken” (Gaeta 2020:2)“the model suggests that (if no actions were taken) an overwhelming part of the population will have been in contact with the virus - most of them with no or very little symptoms - so that if permanent immunity is gained by the immune system of infected, and the virus does not mutate too quickly, one would be confident that there will be no second run of COVID in next year” (Gaeta 2020:2)“restrictive measures are taken into account by a “reduction factor”, and discuss on the one hand how a prompt isolation of asymptomatic infectives would change the dynamics in this framework, and on the other what the time-scale could be in this context” (Gaeta 2020:2)“We will end the paper by a discussion of some relevant general points and by conclusions; we anticipate here the main ones: (i) there is a marked difference between the standard SIR dynamics and the dynamics of the A-SIR model, i.e. the one taking into account the presence of a large class of asymptomatic infectives; (ii) in the case of the COVID-19 epidemic in Italy, assuming a ratio of symptomatic to total infections of ξ = 1/10 yields a good agreement between the model and epidemiological data.” (Gaeta 2020:2)“first face a new virus we only know, by definition, the early phase of the dynamics, so parameters should be extracted from such data. (We stress that the parameters depend not only on the pathogen agent, but also on the social structure and organization of the country (e.g. on its population density, restrictive measures, and sanitary system); thus they are different in each country.) We will thus concentrate on this initial phase, with I (t) and R(t) rather small, and try to obtain approximate analytical expressions for the dynamics; the purpose will be to estimate the parameters α and β - and thus also the epidemic threshold γ - in this case” (Gaeta 2020:5)“large fraction of infected people are actually asymptomatic, but still fully infective, as it appears to be the case for COVID-19” (Gaeta 2020:9)“he presence of a large population of asymptomatic infectives” (Gaeta 2020:9)“(i) On the one hand, they are a formidable vehicle of contagion, as they have no reason to take special precautions, and get in contact with a number of people which themselves do not take the due precautions (which would be taken in the case of an individual with evident symptoms);” (Gaeta 2020:9)“(ii) On the other hand, assuming once the infection is ceased they have acquired permanent immunity, they contribute to group immunity reached once the population of susceptibles falls below the epidemic threshold.” (Gaeta 2020:9)“infective people are either symptomatic or asymptomatic. A more refined subdivision of their state would be more realistic” (Gaeta 2020:10)“assume permanent immunity of individuals who have been infected and recovered, and constant population” (Gaeta 2020:10)“We will have susceptibles S (t) in a unique class, but two classes of infected and infective people: symptomatic I (t) and asymptomatic J (t); and similarly two classes of removed people: registered removed R(t) and unregistered removed (those who were passing unnoticed through the infection) U (t)” (Gaeta 2020:10)“In the case of COVID-19, it is known that the incubation time is about 5.1 days; assuming that symptomatic infection is promptly recognized and swiftly treated, epidemiological and clinical data suggest the approximate values (note that asymptomatic removal time η−1 includes both the incubation time and the healing time) β −1 ≃ 5 − 7, η−1 ≃ 14 − 21 for the removal and recovery rates; the value of ξ is more controversial, as mentioned in the Introduction” (Gaeta 2020:11)RefG. Gaeta, “A simple SIR model with a large set of asymptomatic infectives,” arXiv:2003.08720 [q-bio], Apr. 2020, Accessed: Apr. 16, 2020. [Online]. Available: http://arxiv.org/abs/2003.08720.",
+      "url": "/project1/2020/04/22/SIR_EpidemicSpread/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-22-sir-acontributiontothemathematicaltheoryofepidemics": {
+      "title": "A contribution to the mathematical theory of epidemics",
+      "content"	 : "      Table of Contents  Introduction  Solving Differential Equations  Ref    IntroductionThe simplest model and the foundation of many other models is the SIR model.  S: Suseptible  I: Infectious  R: RecoveredNote that R can be either people that have recovered from the disease or also people that have died.  This model does not differentiate the two states but later on we can look at how we can extend this model using the SIRm model where m incorporates the people that have passed away.You can think of these models as a network model where each node consists of the compartments and the edges from each node corresponds to a rate in which activity from one node to other occurs.  These variables (S, I, and R) represent the number of people in each compartment at a particular time. To represent that the number of susceptible, infected and recovered individuals may vary over time (even if the total population size remains constant), we make the precise numbers a function of t (time): S(t), I(t) and R(t).$beta$ is the rate at which S becomes I and $gamma$ is the rate at which I becomes R.graph LR    S--&amp;gt;|beta|I    I--&amp;gt;|gamma|R    ODE --&amp;gt; Parameter     Parameter  --&amp;gt; Model    Model --&amp;gt; PredictionAs implied by the variable function of t, the model is dynamic in that the numbers in each compartment may fluctuate over time. During an epidemic, the number of susceptible individuals falls rapidly as more of them are infected and thus enter the infectious and recovered compartments. The disease cannot break out again until the number of susceptibles has built back up, e.g. as a result of offspring being born into the susceptible compartment.Solving Differential EquationsNOTE: I will only do this once as all differential equations are solved the same way.Recall:The model is defined as:Note that we normalize everything by the population.Next we take the partial derivative of this equation wrt to time, and it will give us 3 rates of change.There are several key observations we can take from this:  The rate at which the number of suspected people decrease because of the rate of infection.  As time progresses there is a small amount of people in the population that can be infected.  The rate at which the number of infected people increase due to the previous term and decrease based on the number of recovered people.There is no analytical solution for this so simulations are run.One way to use this model is to estimate the hyper-parameters, in this case $beta$ and $gamma$, based on real world data I and then simulate to identify S and R respectively.  This will also enable us to do some forecasting because after all parameters have been identified you only have to integrate across time.This will be our strategy for implementation.  This will be a good time to practice optimization techniques to reduce some cost function.  Basically to identify the parameters we need to reduce some cost funtion such that $hat{y}$ is as close to $y$ as possible.  See the flowchart above.RefW. O. Kermack and A. G. McKendrick, “A contribution to the mathematical theory of epidemics,” Proceedings of the royal society of london. Series A, Containing papers of a mathematical and physical character, vol. 115, no. 772, pp. 700–721, 1927.",
+      "url": "/project1/2020/04/22/SIR_AContributionToTheMathematicalTheoryOfEpidemics/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-22-sgir-randommodellingofcontagioussocialandinfectiousdiseases": {
+      "title": "Random Modelling of Contagious Social and Infectious Diseases",
+      "content"	 : "      Table of Contents  Extracted Annotations  Ref    Good overview of other mathematical models.  Doesn’t go into derivation but simple to follow after reading other papers of modeling and differential equations.Extracted AnnotationsExtracted Annotations (4/22/2020, 3:07:26 PM)“Random Multi-group SIGR Model” (Demongeot et al 2012:1159)“Susceptible contains persons likely to have disease” (Demongeot et al 2012:1159)“second compartment contains Infected” (Demongeot et al 2012:1159)“last compartment is revealed to the recovered people” (Demongeot et al 2012:1159)“third compartment, there is people Infectious with, e.g., gametocytæmia that is to say, people who are contagious” (Demongeot et al 2012:1159)“Table 1 Definition of the parameters used in the system bkj: transmission coefficients between compartments Sk and Gj dkS : natural-death rate in the k-th group of the S compartment dk : natural-death rate in the k-th group of the I compartment dkG : natural-death rate in the k-th group of the G compartment dkR : natural-death rate in the k-th group of the R compartment ek: disease-caused death rate in the k-th group of the I compartment xk: disease-caused death rate in the k-th group of the R compartment Kk: influx of new individuals in the k-th group pk: fraction of new individuals in the k-th group hk: fraction of vaccine individuals in the k-th groupgk: rate at which an infected becomes infectious in the k-th group ck: recovery rate of individuals in the k-th group” (Demongeot et al 2012:1160)RefJ. Demongeot, O. Hansen, A. S. Jannot, and C. Taramasco, “Random Modelling of Contagious (Social and Infectious) Diseases: Examples of Obesity and HIV and Perspectives Using Social Networks,” in 2012 26th International Conference on Advanced Information Networking and Applications Workshops, Fukuoka, Japan, Mar. 2012, pp. 1153–1160, doi: 10.1109/WAINA.2012.173.",
+      "url": "/project1/2020/04/22/SGIR_RandomModellingOfContagiousSocialAndInfectiousDiseases/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-22-seir-globalstabilityfortheseirmodelinepidemiology": {
+      "title": "Global stability for the SEIR model in epidemiology",
+      "content"	 : "      Table of Contents  Extracted Annotations  Ref    May not use this model because it doesn’t really fit with what we are seeing in COVID but let us implement it anyways because it is fairly simple.Extracted AnnotationsRefM. Y. Li and J. S. Muldowney, “Global stability for the SEIR model in epidemiology,” Mathematical biosciences, vol. 125, no. 2, pp. 155–164, 1995.",
+      "url": "/project1/2020/04/22/SEIR_GlobalStabilityForTheSEIRModelInEpidemiology/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-22-sdir-testingmodelingassumptionsinthewestafricaebolaoutbreak": {
+      "title": "Testing Modeling Assumptions in the West Africa Ebola Outbreak",
+      "content"	 : "      Table of Contents  Extracted Annotations  Ref    Overall very simple to read and follow.  They show that simple models can sometimes give adequite results and give guidance of what to do next.where a is the infectious rate and $beta$ is the recovery rate.  Notice that the infectious rate is a function as the model states assumes decreasingly infectious.Extracted Annotations“In the SI model, 100% of individuals are eventually infected, therefore, to find agreement with data, our model has to assume a small proportion of individuals in each division are susceptible to the disease.” (Burghardt et al 2016:34601)“more likely, all individuals are susceptible and, as they become aware of an infection, they reduce their interactions or otherwise reduce the overall disease transmissibility.” (Burghardt et al 2016:34601)“disease model, in which susceptible (s) individuals can become infected (i), but then recover or are removed” (Burghardt et al 2016:34602)“SDIR” (Burghardt et al 2016:34602)“all individuals who recovered or died were assumed to be “removed”. The SIR model, like the SI model, significantly overshoots the cumulative number of cases in the absence of intervention. We counter-balance this effect with an exponentially decreasing disease transmissibility as a result of public health interventions18,19. We call this model the Susceptible - Decreasingly Infectious - Recovered (SDIR) model.” (Burghardt et al 2016:34602)Ref[1]K. Burghardt, C. Verzijl, J. Huang, M. Ingram, B. Song, and M.-P. Hasne, “Testing Modeling Assumptions in the West Africa Ebola Outbreak,” Sci Rep, vol. 6, no. 1, p. 34598, Dec. 2016, doi: 10.1038/srep34598.",
+      "url": "/project1/2020/04/22/SDIR_TestingModelingAssumptionsInTheWestAfricaEbolaOutbreak/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-22-influenzamodelswithwolframmathematica": {
+      "title": "Influenza models with Wolfram Mathematica",
+      "content"	 : "      Table of Contents  Ref    Look at the following to setup the differential equations.  The article is basically like a tutorial on how to implement various things in R.  But we can use the images below to help us create a differential equation in python.RefD. H. Knipl and G. Röst, “Influenza models with Wolfram Mathematica,” p. 22.",
+      "url": "/project1/2020/04/22/InfluenzaModelsWithWolframMathematica/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-21-licensing": {
+      "title": "Licensing Template",
+      "content"	 : "You need to add the following licensing and copyright statement at the top of all codes.Copyright (C) yyyy  Mario Garingomg.mydev@gmail.comThis program is free software; you can redistribute it and/ormodify it under the terms of the GNU General Public Licenseas published by the Free Software Foundation; either version 2of the License, or (at your option) any later version.This program is distributed in the hope that it will be useful,but WITHOUT ANY WARRANTY; without even the implied warranty ofMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See theGNU General Public License for more details.You should have received a copy of the GNU General Public Licensealong with this program; if not, write to the Free SoftwareFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.",
+      "url": "/project1/2020/04/21/Licensing/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-21-exporttopdf": {
+      "title": "Export Project to PDF",
+      "content"	 : "You can export all the notes located in the *_siteproject1* directory.  To do so go to the parent directory of the project.  There should only be 4 files:  _PDF: Location of the resultant pdf files.  git_projectCodes: Location of the codes to be backed up by github  local_projectNotes: Local directory of the notes  exportToPDF.py: A python file to create the pdf files.Once in this directory, open a terminal and activate any python 3 environment.  Then run the exportToPDF.py file with the command:python exportToPDF.pyThis will run the code:import os,sysfrom glob import globimport pdfkitfrom tqdm import tqdmdef getHTMLFiles(searchDirectiory):    result = [y for x in os.walk(searchDirectiory) for y in glob(os.path.join(x[0], &#39;*.html&#39;))]    return resultdef main():# I/Ocwd = os.getcwd()pagesLocation = cwd + &#39;local_projectNotes_siteproject1&#39; pdfOutDir = cwd+&#39;_PDF&#39;# Get all HTML FileshtmlFiles = getHTMLFiles(pagesLocation)# Loop through and generate all the PDF Filesfor htmlFile in tqdm(htmlFiles):        pdfFileName = htmlFile.split(&#39;&#39;)[-2]+&#39;.pdf&#39;    pdfkit.from_file(htmlFile,pdfOutDir+pdfFileName)      os.system( &#39;cls&#39; )if __name__ == &quot;__main__&quot;:    main()    print(&#39;Finished publishing notes in PDF&#39;)",
+      "url": "/project1/2020/04/21/ExportToPDF/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-20-pagefrontmatter": {
+      "title": "Page Front Matter",
+      "content"	 : "      Table of Contents  General Front Matter          Variations                  Note Type          Documentation Type          Reporting Type                      Adding Table of Contents  Adding both Front Matter and Table of Contents    General Front MatterCopy paste the following in the front matter of the new note.---layout:     myPagetitle:      myTestauthor:     Mario Garingotags: mytag description:  Description of the notecategory:  project1type: notes---VariationsYou can change the type of note by changing the type in the front matter.  Currently you can add only notes, documentation, and reporting.  The code section is automatically genearted by a python code.Note Typetype: notesDocumentation Typetype: documentationReporting Typetype: reportingAdding Table of ContentsIf you want to add a table of conents which you probably do then you need to add the follow code after the front matter.&amp;lt;!-- *********************************** Table of Contents *********************************** --&amp;gt;&amp;lt;div class=&quot;float-left scrollbar&quot; id=&quot;style-2&quot; style=&quot;overflow:scroll;height: 45%;width:20%;background-color: black;&quot;&amp;gt;&amp;lt;div class=&quot;recentpost&quot; style=&quot;padding: 10px; font-size: small;background-color: black;&quot;&amp;gt;&amp;lt;div class=&quot;customTOC&quot; id=&quot;inline_toc&quot; markdown=&quot;1&quot; style=&quot;color:white&quot;&amp;gt;&amp;lt;h4 style=&quot;color: white;&quot;&amp;gt;Table of Contents&amp;lt;/h4&amp;gt;* TOC{:toc}&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;!-- *********************************** Table of Contents *********************************** --&amp;gt;Adding both Front Matter and Table of ContentsIf you want both just copy the following:---layout:     myPagetitle:      myTestauthor:     Mario Garingotags: mytag  description:  Description of the notecategory:  project1type: notes---&amp;lt;!-- *********************************** Table of Contents *********************************** --&amp;gt;&amp;lt;div class=&quot;float-left scrollbar&quot; id=&quot;style-2&quot; style=&quot;overflow:scroll;height: 45%;width:20%;background-color: black;&quot;&amp;gt;&amp;lt;div class=&quot;recentpost&quot; style=&quot;padding: 10px; font-size: small;background-color: black;&quot;&amp;gt;&amp;lt;div class=&quot;customTOC&quot; id=&quot;inline_toc&quot; markdown=&quot;1&quot; style=&quot;color:white&quot;&amp;gt;&amp;lt;h4 style=&quot;color: white;&quot;&amp;gt;Table of Contents&amp;lt;/h4&amp;gt;* TOC{:toc}&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;!-- *********************************** Table of Contents *********************************** --&amp;gt;Note: Don’t forget to change the type of note.",
+      "url": "/project1/2020/04/20/PageFrontMatter/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-20-pdfdocsheetsfrontmatter": {
+      "title": "PDF Doc Sheets Front Matter",
+      "content"	 : "      Table of Contents  General Front Matter          Files From gDrive                  Adding gDrive PDF Files          Adding gDrive Sheet Files          Adding gDrive Sheet Files          Adding gDrive Slides Files                    Files From The Web          General Front MatterFiles From gDriveIf you want to add gDoc, gSheet or PDF from google drive add the following parameters in the front matter.Copy paste the following in the front matter of the new note.  Note that the random collection of numbers and letters are the sharable id of the document you are trying to link.Adding gDrive PDF FilesgDrivePDFile: 1KKTAUuj8OlM03U922KJL1ZTTSuMBTK4XAdding gDrive Sheet FilesgDriveSheets: 1WnGloeNUhf__Um0i1kSsqVUA3ZwF56yr68R4_UQyiE8Adding gDrive Sheet FilesgDriveDoc: 1iPIAVzNSf8uNbhaV56lVvxd_2lOWVywTXuGFCPPJJ9sAdding gDrive Slides FilesgDriveSlide: 1cQyCiFMB48_0RAl83ErkJVGJe6VwIUiP5t3pIPH-nH8Files From The WebThese should be the direct link to the PDF.  I don’t advise this because sometimes the PDF just disappears.  The best thing to do is download them, place them in the mfDev gDrive account and link them according to the above ways of adding them on the page.pdfFile: http://youeeg.net/_siteMigraineProject/assets/pdf/conferences/CSCI2017/CSCI2017Presentation.pdf",
+      "url": "/project1/2020/04/20/PDFDocSheetsFrontMatter/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-20-codefrontmatter": {
+      "title": "Code Front Matter",
+      "content"	 : "This is done automatically via a python script but the front matter should be---layout:     myNotebookTemptitle:      NoteBook Titleauthor:     Mario Garingotags:      jupyterdescription:     Need to add description.category:     project1type:     codesnotebookfilename:     NameOfTheJSONOrJupyterNotebookLocatedIn_Data---Adding custom cells for front matterTo make this work make sure that in the jupyter notebook the fist cell is changed so that the metadata has an attribute “cellType” with the value of “FrontMatter”.In jupyter notebook edit cell metadata by going to view-&amp;gt;edit metadata{ &quot;cellType&quot;: &quot;FrontMatter&quot; }This will be taken into account in the myNotebookTemp.html template and be removed when showing the jupyter notebook.Then remove cell tool bar after this is completed",
+      "url": "/project1/2020/04/20/CodeFrontMatter/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-20-addingimagesfromgdrive": {
+      "title": "Adding Images from gDrive",
+      "content"	 : "Adding ImagesEssentially do the follow:  Copy sharable link          EX: https://drive.google.com/file/d/1UifH9c8DGBMWa-UKmMAsOJx1uBzVb9Yd/view?usp=sharing        Remove everything after the file ID          EX: https://drive.google.com/file/d/1UifH9c8DGBMWa-UKmMAsOJx1uBzVb9Yd        Replace /file/d/ with uc?id=          EX: https://drive.google.com/uc?id=1UifH9c8DGBMWa-UKmMAsOJx1uBzVb9Yd        Copy paste this new file onto the website you want this image to be used![](https://drive.google.com/uc?id=___IMG_ID____)Follow this tutorialAlternative Using Liquid{% assign gID = &#39;1UifH9c8DGBMWa-UKmMAsOJx1uBzVb9Yd&#39; %}{% include addGImg %}Changing Image SizeTo change the dimension of the image add {:height=”HEIGHTpx” width=”WIDTHpx”} to the end of the tag.  Note that this is for “kramdom”![](https://drive.google.com/uc?id=___IMG_ID____ ={:height=&quot;36px&quot; width=&quot;36px&quot;})",
+      "url": "/project1/2020/04/20/AddingImagesFromGDrive/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-20-addingflowcharts": {
+      "title": "Adding Flow Charts",
+      "content"	 : "To add mermaid flow charts all you have to do is place the following set of liquid code in your md file.{% mermaid %}{% endmermaid %}Then place your mermaid graph in between the liquid code and it will render a flow chart automatically.  An example diagram can be seen below with the graph.graph LR    A[Hard edge] --&amp;gt;|Link text| B(Round edge)    B --&amp;gt; C{Decision}    C --&amp;gt;|One| D[Result one]    C --&amp;gt;|Two| E[Result two]graph LR    A[Hard edge] --&amp;gt;|Link text| B(Round edge)    B --&amp;gt; C{Decision}    C --&amp;gt;|One| D[Result one]    C --&amp;gt;|Two| E[Result two]Types of ChartsThere are several charts you can create using mermaid.  Flowchart  Sequence Diagrams  Class Diagrams  State Diagram  Entity Relationship Diagrams  Gantt  Pie ChartLive EditorThe live editor can be found here.  Just copy paste the content in the mermaid liquid tags.",
+      "url": "/project1/2020/04/20/AddingFlowCharts/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-20-acknowledgements": {
+      "title": "Acknowledgements",
+      "content"	 : "      Table of Contents  Base Theme  Additions    Base Theme  project-pagesAdditions  Copying Code Snippets          marcoaugustoandrade        No Print Divs          stackOverflow        Mermaid Flow chart          jasonbellamy        Export to PDF          YouTube Video Wkhtmltopdf Installation       PDFKIT Documentation      Walk through directory      ",
+      "url": "/project1/2020/04/20/Acknowledgements/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-19-litrevtoc": {
+      "title": "Lit Review Toc",
+      "content"	 : "IntroductionTypically, infectious diseases are mathematically characterized by using  compartmental models.  These models divide the population in compartments, with varying assumptions on each individual as being in various compartments having the same characteristics.  These models are often investigated through the use of ordinary differential equations, but can also be viewed in a stochastic framework, which are more akin to the real world but are often harder to analyze.These models can help us predict properties of the disease as it spreads, giving us vital information regarding the prevalence and duration of the epidemic.  Furthermore, by varying hyper-parameters of the model we can simulate various outcomes of the state of the epidemic to determine the most effective course of actions.  For instance, some models may take into account equipments such as ICU and vaccines to identify places of aid in the healthcare system.This project is by no means an exhaustive literature review of the different types of models but it does shed light on variuos techniques that are currently being used.  In the project I will use these models as a way of tracking the COVID-19 pandemic.This is in order of implementation as well as my literature review is as follows:  SIR  SAIR  SDIR  SIGR  SEIR",
+      "url": "/project1/2020/04/19/LitRevTOC/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-19-growthfactor": {
+      "title": "Growth Factor",
+      "content"	 : "",
+      "url": "/project1/2020/04/19/GrowthFactor/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-trendlines-fbprophet": {
+      "title": "Trend Lines",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/TrendLines_fbprophet/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-model-sir": {
+      "title": "Model S I R",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/Model_SIR/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-modelsirnetworkanalysis": {
+      "title": "Model S I R Network Analysis",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/ModelSIRNetworkAnalysis/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-modelsirmnetworkanalysis": {
+      "title": "Model S I R M Network Analysis",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/ModelSIRMNetworkAnalysis/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-modelsigr-networkanalysis": {
+      "title": "Model S I G R Network Analysis",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/ModelSIGR_NetworkAnalysis/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-modelseir-m-networkanalysis": {
+      "title": "Model S E I R M Network Analysis",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/ModelSEIR_M_NetworkAnalysis/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-modelseair-networkanalysis": {
+      "title": "Model S E A I R Network Analysis",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/ModelSEAIR_NetworkAnalysis/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-modelcomparison": {
+      "title": "Model Comparison",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/ModelComparison/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-logregression": {
+      "title": "Log Regression",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/LogRegression/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-loadingdata": {
+      "title": "Loading Data",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/LoadingData/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-linearregression": {
+      "title": "Linear Regression",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/LinearRegression/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-function-modelsirnetworkanalysis": {
+      "title": "Function Model S I R Network Analysis",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/Function_ModelSIRNetworkAnalysis/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-function-modelsirmnetworkanalysis": {
+      "title": "Function Model S I R M Network Analysis",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/Function_ModelSIRMNetworkAnalysis/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-function-modelsigr-networkanalysis": {
+      "title": "Function Model S I G R Network Analysis",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/Function_ModelSIGR_NetworkAnalysis/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-function-modelsdir-networkanalysis": {
+      "title": "Function Model S D I R Network Analysis",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/Function_ModelSDIR_NetworkAnalysis/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-17-function-modelsair-assymptomatic-networkanalysis": {
+      "title": "Function Model S A I R Assymptomatic Network Analysis",
+      "content"	 : "",
+      "url": "/project1/2020/04/17/Function_ModelSAIR_Assymptomatic_NetworkAnalysis/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+}
