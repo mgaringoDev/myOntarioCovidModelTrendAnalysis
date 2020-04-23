@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Project Descriptions">
-	<meta property="og:title" content="projectName" />
+    <meta name="description" content="This is just a place where I can do some analysis on the COVID data.">
+	<meta property="og:title" content="Ontario COVID Modeling and Analysis" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis//projects/project1/" />
 <meta property="og:image" content="/https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/img/home-bg.jpg">
@@ -31,7 +31,7 @@
 
 	<link rel='shortcut icon' type='image/png' href='https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/favicon.png' />
 
-    <title>projectName - Title Project</title>
+    <title>Ontario COVID Modeling and Analysis - myOntarioCovidModelTrendAnalysis</title>
 
     <link rel="canonical" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/projects/project1/">
 	
@@ -119,7 +119,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/">Title Project</a>
+            <a class="navbar-brand" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/">myOntarioCovidModelTrendAnalysis</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -130,7 +130,7 @@
                 </li>
 				
                 <li>
-                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/projects/project1/">projectName</a>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/projects/project1/">Ontario COVID Modeling and Analysis</a>
                 </li>
                 
                 
@@ -173,7 +173,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading" style="padding: 75px 0">
                        
-                    <h2>projectName</h2>
+                    <h2>Ontario COVID Modeling and Analysis</h2>
                     <hr class="small">
                     <h5>This is a template for a project page</h5>
                 </div>
@@ -191,8 +191,59 @@
               return "https://drive.google.com/uc?id=" +gDriveID;
             }
             </script>
-            <h1 id="abstact">Abstact</h1>
-<p>Location of abstract</p>
+            <p>Visit the <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/">project page</a> for a more detailed look on how the images below were created.</p>
+
+<h1 id="introduction">Introduction</h1>
+<p>I wanted to get a deeper insight on the current state of things here in Ontario.  This is by no means a comprehensive look at all possible models but only the models that I have come across through my readings.</p>
+
+<h1 id="data-set">Data Set</h1>
+<p>Berry I, Soucy J-PR, Tuite A, Fisman D. Open access epidemiologic data and an interactive dashboard to monitor the COVID-19 outbreak in Canada. CMAJ. 2020 Apr 14;192(15):E420.</p>
+
+<h1 id="to-do">To Do:</h1>
+
+<ul>
+  <li>Trend Analysis:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Log Regression</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />fbProphet</li>
+    </ul>
+  </li>
+  <li>Model Creation:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />SIR(M)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />SAIR(M)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />SDIR(M)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />SIGR(M)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />SEIR(M)</li>
+    </ul>
+  </li>
+  <li>Prediction:
+    <ul>
+      <li>[ ]</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="order-of-reading">Order of Reading</h1>
+
+<h2 id="looking-at-growth-rates"><a href="https://github.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/blob/master/notebooks/GrowthFactor.ipynb">Looking at Growth Rates</a></h2>
+<p><img src="https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/weeklyGrowthFactor.PNG" alt="" /></p>
+
+<h2 id="looking-at-trends"><a href="https://github.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/blob/master/notebooks/TrendLines_fbprophet.ipynb">Looking at Trends</a></h2>
+<p><img src="https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/trendAnalysis_1.PNG" alt="" />
+<img src="https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/trendAnalysis_2.PNG" alt="" /></p>
+
+<p>These are the critical dates from the above graph.</p>
+
+<p><img src="https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/criticalDates.PNG" alt="" /></p>
+
+<h2 id="modeling-trends"><a href="https://github.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/blob/master/notebooks/ModelComparison.ipynb">Modeling Trends</a></h2>
+<p><img src="https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/3PhaseModelComparison.PNG" alt="" /></p>
+
+<h2 id="comapring-trends"><a href="https://github.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/blob/master/notebooks/ModelComparison.ipynb">Comapring Trends</a></h2>
+<p><img src="https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/entireTimeModelComparison.PNG" alt="" />
+<img src="https://raw.githubusercontent.com/mgaringoDev/myOntarioCovidModelTrendAnalysis/master/imgs/modelErrorComparison.png" alt="" /></p>
+
 
 
 <!-- This loops through all the posts of this project -->
@@ -313,6 +364,21 @@
     <p class="post-meta" style="margin-bottom:5px">Posted by Mario Garingo on April 22, 2020</p>
 	<div class="notepad-index-post-tags" style="">
 		<a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/search/index.html#litReview" title="Other posts from the Litreview tag">Litreview</a>&nbsp;<a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/search/index.html#model" title="Other posts from the Model tag">Model</a>&nbsp;<a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/search/index.html#SEAIR" title="Other posts from the Seair tag">Seair</a>
+	</div>
+</div>
+<hr>
+
+
+
+<div class="post-preview">
+    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/CreatingSite/">
+        <h2 class="post-title">            Jekyll Site Creation
+        </h2>
+        
+    </a>
+    <p class="post-meta" style="margin-bottom:5px">Posted by Mario Garingo on April 22, 2020</p>
+	<div class="notepad-index-post-tags" style="">
+		<a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/search/index.html#addNew" title="Other posts from the Addnew tag">Addnew</a>&nbsp;<a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/search/index.html#docs" title="Other posts from the Docs tag">Docs</a>
 	</div>
 </div>
 <hr>

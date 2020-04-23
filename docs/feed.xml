@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Title Project</title>
-    <description>Project Descriptions</description>
+    <title>myOntarioCovidModelTrendAnalysis</title>
+    <description>This is just a place where I can do some analysis on the COVID data.</description>
     <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/</link>
     <atom:link href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 22 Apr 2020 18:01:50 -0400</pubDate>
-    <lastBuildDate>Wed, 22 Apr 2020 18:01:50 -0400</lastBuildDate>
+    <pubDate>Thu, 23 Apr 2020 10:19:23 -0400</pubDate>
+    <lastBuildDate>Thu, 23 Apr 2020 10:19:23 -0400</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -480,6 +480,32 @@ D. H. Knipl and G. Röst, “Influenza models with Wolfram Mathematica,” p. 22
       </item>
     
       <item>
+        <title>Jekyll Site Creation</title>
+        <description>Run the following code in the command line.
+
+jekyll build --config &quot;_configPublish.yml&quot;
+
+
+NOTE: When running this the first time you need to change the _configPublish.yml file
+
+  destination: change the project folder in github folder.
+  baseurl: change the project page github pages website location.
+
+</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/CreatingSite/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/CreatingSite/</guid>
+        
+        <category>addNew</category>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
         <title>Licensing Template</title>
         <description>You need to add the following licensing and copyright statement at the top of all codes.
 
@@ -504,67 +530,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
         <pubDate>Tue, 21 Apr 2020 00:00:00 -0400</pubDate>
         <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/Licensing/</link>
         <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/Licensing/</guid>
-        
-        <category>docs</category>
-        
-        
-        <category>project1</category>
-        
-      </item>
-    
-      <item>
-        <title>Export Project to PDF</title>
-        <description>You can export all the notes located in the *_site\project1* directory.  To do so go to the parent directory of the project.  There should only be 4 files:
-
-
-  _PDF: Location of the resultant pdf files.
-  git_projectCodes: Location of the codes to be backed up by github
-  local_projectNotes: Local directory of the notes
-  exportToPDF.py: A python file to create the pdf files.
-
-
-Once in this directory, open a terminal and activate any python 3 environment.  Then run the exportToPDF.py file with the command:
-
-python exportToPDF.py
-
-
-This will run the code:
-
-import os,sys
-from glob import glob
-import pdfkit
-from tqdm import tqdm
-
-
-def getHTMLFiles(searchDirectiory):
-    result = [y for x in os.walk(searchDirectiory) for y in glob(os.path.join(x[0], '*.html'))]
-    return result
-
-def main():
-	# I/O
-	cwd = os.getcwd()
-	pagesLocation = cwd + '\\local_projectNotes\\_site\\project1\\' 
-	pdfOutDir = cwd+'\\_PDF\\'
-
-	# Get all HTML Files
-	htmlFiles = getHTMLFiles(pagesLocation)
-
-	# Loop through and generate all the PDF Files
-	for htmlFile in tqdm(htmlFiles):	    
-	    pdfFileName = htmlFile.split('\\')[-2]+'.pdf'
-	    pdfkit.from_file(htmlFile,pdfOutDir+pdfFileName)  
-	    os.system( 'cls' )
-
-
-if __name__ == &quot;__main__&quot;:
-    main()
-    print('Finished publishing notes in PDF')
-
-
-</description>
-        <pubDate>Tue, 21 Apr 2020 00:00:00 -0400</pubDate>
-        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/ExportToPDF/</link>
-        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/ExportToPDF/</guid>
         
         <category>docs</category>
         

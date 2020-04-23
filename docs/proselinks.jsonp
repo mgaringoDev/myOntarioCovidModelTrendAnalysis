@@ -131,6 +131,11 @@ callback([
   } ,
 
   {
+    "text": "Jekyll Site Creation",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/CreatingSite/"
+  } ,
+
+  {
     "text": "Influenza models with Wolfram Mathematica",
     "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/InfluenzaModelsWithWolframMathematica/"
   } ,

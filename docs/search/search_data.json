@@ -81,6 +81,16 @@
     ,
   
 
+    "project1-2020-04-22-creatingsite": {
+      "title": "Jekyll Site Creation",
+      "content"	 : "Run the following code in the command line.jekyll build --config &quot;_configPublish.yml&quot;NOTE: When running this the first time you need to change the _configPublish.yml file  destination: change the project folder in github folder.  baseurl: change the project page github pages website location.",
+      "url": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/CreatingSite/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
     "project1-2020-04-21-licensing": {
       "title": "Licensing Template",
       "content"	 : "You need to add the following licensing and copyright statement at the top of all codes.Copyright (C) yyyy  Mario Garingomg.mydev@gmail.comThis program is free software; you can redistribute it and/ormodify it under the terms of the GNU General Public Licenseas published by the Free Software Foundation; either version 2of the License, or (at your option) any later version.This program is distributed in the hope that it will be useful,but WITHOUT ANY WARRANTY; without even the implied warranty ofMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See theGNU General Public License for more details.You should have received a copy of the GNU General Public Licensealong with this program; if not, write to the Free SoftwareFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.",
