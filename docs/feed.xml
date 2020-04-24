@@ -5,9 +5,24 @@
     <description>This is just a place where I can do some analysis on the COVID data.</description>
     <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/</link>
     <atom:link href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 23 Apr 2020 10:19:23 -0400</pubDate>
-    <lastBuildDate>Thu, 23 Apr 2020 10:19:23 -0400</lastBuildDate>
+    <pubDate>Fri, 24 Apr 2020 13:09:14 -0400</pubDate>
+    <lastBuildDate>Fri, 24 Apr 2020 13:09:14 -0400</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Model Predictin</title>
+        <description>
+</description>
+        <pubDate>Fri, 24 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPredictin/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPredictin/</guid>
+        
+        <category>jupyter</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
     
       <item>
         <title>Epidemic Modeling 101 Or why your CoVID-19 exponential ts are wrong</title>
@@ -480,58 +495,14 @@ D. H. Knipl and G. Röst, “Influenza models with Wolfram Mathematica,” p. 22
       </item>
     
       <item>
-        <title>Jekyll Site Creation</title>
-        <description>Run the following code in the command line.
-
-jekyll build --config &quot;_configPublish.yml&quot;
-
-
-NOTE: When running this the first time you need to change the _configPublish.yml file
-
-  destination: change the project folder in github folder.
-  baseurl: change the project page github pages website location.
-
+        <title>Trend Lines</title>
+        <description>
 </description>
         <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/CreatingSite/</link>
-        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/CreatingSite/</guid>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/TrendLines_fbprophet/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/TrendLines_fbprophet/</guid>
         
-        <category>addNew</category>
-        
-        <category>docs</category>
-        
-        
-        <category>project1</category>
-        
-      </item>
-    
-      <item>
-        <title>Licensing Template</title>
-        <description>You need to add the following licensing and copyright statement at the top of all codes.
-
-Copyright (C) yyyy  Mario Garingo
-mg.mydev@gmail.com
-
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-
-</description>
-        <pubDate>Tue, 21 Apr 2020 00:00:00 -0400</pubDate>
-        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/Licensing/</link>
-        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/21/Licensing/</guid>
-        
-        <category>docs</category>
+        <category>jupyter</category>
         
         
         <category>project1</category>

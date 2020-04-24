@@ -136,6 +136,91 @@ callback([
   } ,
 
   {
+    "text": "Function Model S A I R Assymptomatic Network Analysis",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/Function_ModelSAIR_Assymptomatic_NetworkAnalysis/"
+  } ,
+
+  {
+    "text": "Function Model S D I R Network Analysis",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/Function_ModelSDIR_NetworkAnalysis/"
+  } ,
+
+  {
+    "text": "Function Model S I G R Network Analysis",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/Function_ModelSIGR_NetworkAnalysis/"
+  } ,
+
+  {
+    "text": "Function Model S I R M Network Analysis",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/Function_ModelSIRMNetworkAnalysis/"
+  } ,
+
+  {
+    "text": "Function Model S I R Network Analysis",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/Function_ModelSIRNetworkAnalysis/"
+  } ,
+
+  {
+    "text": "Growth Factor",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/GrowthFactor/"
+  } ,
+
+  {
+    "text": "Linear Regression",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/LinearRegression/"
+  } ,
+
+  {
+    "text": "Loading Data",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/LoadingData/"
+  } ,
+
+  {
+    "text": "Log Regression",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/LogRegression/"
+  } ,
+
+  {
+    "text": "Model Comparison",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/ModelComparison/"
+  } ,
+
+  {
+    "text": "Model S E A I R Network Analysis",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/ModelSEAIR_NetworkAnalysis/"
+  } ,
+
+  {
+    "text": "Model S E I R M Network Analysis",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/ModelSEIR_M_NetworkAnalysis/"
+  } ,
+
+  {
+    "text": "Model S I G R Network Analysis",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/ModelSIGR_NetworkAnalysis/"
+  } ,
+
+  {
+    "text": "Model S I R M Network Analysis",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/ModelSIRMNetworkAnalysis/"
+  } ,
+
+  {
+    "text": "Model S I R Network Analysis",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/ModelSIRNetworkAnalysis/"
+  } ,
+
+  {
+    "text": "Model S I R",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/Model_SIR/"
+  } ,
+
+  {
+    "text": "Trend Lines",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/TrendLines_fbprophet/"
+  } ,
+
+  {
     "text": "Influenza models with Wolfram Mathematica",
     "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/InfluenzaModelsWithWolframMathematica/"
   } ,
@@ -173,6 +258,11 @@ callback([
   {
     "text": "Epidemic Modeling 101 Or why your CoVID-19 exponential ts are wrong",
     "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SIR_WhyExponentialModelsAreWrong/"
+  } ,
+
+  {
+    "text": "Model Predictin",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPredictin/"
   } 
 
 ])
