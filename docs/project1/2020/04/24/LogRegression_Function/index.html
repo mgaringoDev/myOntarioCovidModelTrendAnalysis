@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is just a place where I can do some analysis on the COVID data.">
+	<meta property="og:title" content="Log Regression Function" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis//project1/2020/04/24/LogRegression_Function/" />
+<meta property="og:image" content="/https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/img/home-bg.jpg">
+	
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+<meta name="citation_author" content="Mario Garingo">
+
+
+<meta name="citation_author" content="David Brough">
+
+
+<meta name="citation_author" content="Surya R. Kalidindi">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/favicon.png' />
+
+    <title>Log Regression Function - myOntarioCovidModelTrendAnalysis</title>
+
+    <link rel="canonical" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/LogRegression_Function/">
+	
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/clean-blog.css">
+	
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/syntax.css">
+
+    <!-- Copy code button CSS-->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/copyButton.css">
+
+    <!-- No Print CSS -->
+    <link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/noPrint.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/js/clean-blog.min.js "></script>
+	
+	
+	
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75881392-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+	
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/">myOntarioCovidModelTrendAnalysis</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/">Home</a>
+                </li>
+				
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/projects/project1/">Ontario COVID Modeling and Analysis</a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/codes/">Codes</a>
+                </li>
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/documentation/">Documentation</a>
+                </li>
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/search/">Search</a>
+                </li>
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/members/">Members</a>
+                </li>
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/notes/">Notes</a>
+                </li>
+                
+                <li>
+                    <a href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/reporting/">Reporting</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/img/home-bg.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading" style="padding: 30px 0">
+                    <h2>Log Regression Function</h2>
+                    
+                    <h5>Need to add description.</h5>
+                    
+                    <h6>Posted by Mario Garingo on April 24, 2020</h6>	
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<link rel="stylesheet" href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/css/myJupyterNotebook.css">
+
+<!-- Table of Contents -->
+
+<!-- Post Content -->
+<style>
+img {
+	display:block;
+	max-width:  100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+img {
+	-moz-transition:-moz-transform 0.5s ease-in; 
+	-webkit-transition:-webkit-transform 0.5s ease-in; 
+	-o-transition:-o-transform 0.5s ease-in;
+}
+img:active{
+	-moz-transform:scale(1.2); 
+	-webkit-transform:scale(1.2);
+	-o-transform:scale(1.2);
+}
+}
+
+@media only screen and (min-width: 1250px) {
+img {
+	-moz-transition:-moz-transform 0.5s ease-in; 
+	-webkit-transition:-webkit-transform 0.5s ease-in; 
+	-o-transition:-o-transform 0.5s ease-in;
+}
+img:active{
+	-moz-transform:scale(1.5); 
+	-webkit-transform:scale(1.5);
+	-o-transform:scale(1.5);
+}
+}
+
+@media only screen and (min-width: 1500px) {
+img {
+	-moz-transition:-moz-transform 0.5s ease-in; 
+	-webkit-transition:-webkit-transform 0.5s ease-in; 
+	-o-transition:-o-transform 0.5s ease-in;
+}
+img:active{
+	-moz-transform:scale(2); 
+	-webkit-transform:scale(2);
+	-o-transform:scale(2);
+}
+}
+</style>
+<script>
+window.addEventListener("DOMContentLoaded", function() {
+        // do stuff
+	var toc = "";
+    var level = 0;
+
+    document.getElementById("pyCode").innerHTML =
+        document.getElementById("pyCode").innerHTML.replace(
+            /<h([\d])>([^<]+)<\/h([\d])>/gi,
+            function (str, openLevel, titleText, closeLevel) {
+                if (openLevel != closeLevel) {
+                    return str;
+                }
+
+                if (openLevel > level) {
+                    toc += (new Array(openLevel - level + 1)).join("<ul>");
+                } else if (openLevel < level) {
+                    toc += (new Array(level - openLevel + 1)).join("</ul>");
+                }
+
+                level = parseInt(openLevel);
+
+                var anchor = titleText.replace(/ /g, "_");
+                toc += "<li><a href=\"#" + anchor + "\" style=\"color:white;\"><b>" + titleText
+                    + "</b></a></li>";
+
+                return "<h" + openLevel + "><a name=\"" + anchor + "\">"
+                    + titleText + "</a></h" + closeLevel + ">";
+            }
+        );
+
+    if (level) {
+        toc += (new Array(level + 1)).join("</ul>");
+    }
+
+    document.getElementById("toc").innerHTML += toc;
+    }, false);
+</script>
+
+<article>
+    <div id="content" class="container">
+
+    	<!-- *****************  floating TOC *****************-->
+    	<div class="float-left scrollbar" id="style-2" style="overflow:scroll;height: 45%;width:20%;background-color: black;">
+			<div class="recentpost" style="padding: 10px; font-size: small;background-color: black;">
+				<nav>
+					<div id="toc" style="background-color: black;">
+		        		<h4 style="color: white;">Table of Contents:</h4>
+		    		</div> 
+				</nav>
+			</div>
+		</div>
+		<!-- *****************  floating TOC *****************-->
+
+        <div class="row">
+            <div id = "pyCode" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+
+
+
+
+
+
+
+
+
+
+<!-- -------------------------- -->
+
+<h1>Import Path </h1>
+
+<!-- -------------------------- -->
+
+<!-- # Import Path -->
+
+<!-- ************************* This is when the cell is a code ************************* -->
+<!-- *********************************************************************************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">'../'</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">p</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Adding {} path to system'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span></code></pre></figure>
+
+<!-- *************** Showing the python output of the code  ********************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">Adding</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Cerebral</span>\<span class="n">_MarioSandBox</span>\<span class="n">Python</span>\<span class="n">projectPage_myOntarioCovidModelTrendAnalysis</span>\<span class="n">git_projectCodes</span>\<span class="n">myOntarioCovidModelTrendAnalysis</span> <span class="n">path</span> <span class="n">to</span> <span class="n">system</span></code></pre></figure>
+
+<!-- ***************************************************************************** -->
+
+<!-- *************** Showing the python table of the code  ********************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- -------------------------- -->
+
+<p>The <a href="https://github.com/ishaberry/Covid19Canada">Epidemiological Data from the COVID-19 Outbreak in Canada</a> located in github.</p>
+
+<!-- -------------------------- -->
+
+<!-- The [Epidemiological Data from the COVID-19 Outbreak in Canada](https://github.com/ishaberry/Covid19Canada) located in github.
+
+ -->
+
+<!-- ************************* This is when the cell is a code ************************* -->
+<!-- *********************************************************************************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">myFunctions.covid</span> <span class="kn">import</span> <span class="n">covid</span> <span class="k">as</span> <span class="n">cvd</span></code></pre></figure>
+
+<!-- *************** Showing the python table of the code  ********************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- ***************************************************************************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span></code></pre></figure>
+
+<!-- *************** Showing the python table of the code  ********************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- -------------------------- -->
+
+<h1>Get Data </h1>
+
+<!-- -------------------------- -->
+
+<!-- # Get Data -->
+
+<!-- ************************* This is when the cell is a code ************************* -->
+<!-- *********************************************************************************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">covidObject</span> <span class="o">=</span> <span class="n">cvd</span><span class="p">(</span><span class="n">cached</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span></code></pre></figure>
+
+<!-- *************** Showing the python output of the code  ********************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">Getting</span> <span class="n">COVID</span> <span class="n">data</span>
+<span class="n">cached</span></code></pre></figure>
+
+<!-- ***************************************************************************** -->
+
+<!-- *************** Showing the python table of the code  ********************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- ***************************************************************************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">covidObject</span><span class="o">.</span><span class="n">getProcessedData</span><span class="p">(</span><span class="s">'Ontario'</span><span class="p">)</span></code></pre></figure>
+
+<!-- *************** Showing the python table of the code  ********************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- ***************************************************************************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># convert dictionary into dataframe
+</span><span class="n">dfData</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">covidObject</span><span class="o">.</span><span class="n">dataProcess</span><span class="p">)</span>
+<span class="c1"># convert date col to datetime pandas series
+</span><span class="n">dfData</span><span class="p">[</span><span class="s">'date'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dfData</span><span class="p">[</span><span class="s">'date'</span><span class="p">])</span>
+<span class="c1"># convert index to dates
+</span><span class="n">dfData</span> <span class="o">=</span> <span class="n">dfData</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s">'date'</span><span class="p">)</span></code></pre></figure>
+
+<!-- *************** Showing the python table of the code  ********************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- -------------------------- -->
+
+<h1>Modeling Linear Regression </h1>
+
+<!-- -------------------------- -->
+
+<!-- # Modeling Linear Regression -->
+
+<!-- ************************* This is when the cell is a code ************************* -->
+<!-- *********************************************************************************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">covidObject</span><span class="o">.</span><span class="n">dfData</span> <span class="o">=</span> <span class="n">dfData</span></code></pre></figure>
+
+<!-- *************** Showing the python table of the code  ********************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- ***************************************************************************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">covidObject</span><span class="o">.</span><span class="n">dispCurve</span><span class="p">(</span><span class="n">lenPred</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+                      <span class="n">showPredict</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span></code></pre></figure>
+
+<!-- *************** Showing the python output of the code  ********************** -->
+
+<!-- *************** Showing the python image of the code  ********************** -->
+
+<p><img src="data:image/png;base64,  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 " /></p>
+
+<!-- ***************************************************************************** -->
+
+<!-- *************** Showing the python output of the code  ********************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">75</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">13768.07628248915</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">13768.07628248915</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">76</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">14067.994559932125</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">299.9182774429755</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">77</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">14337.662096775503</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">269.6675368433771</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">78</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">14578.9543276287</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">241.2922308531979</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">79</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">14793.919743368217</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">214.96541573951617</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">80</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">14984.689790743427</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">190.7700473752102</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">81</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">15153.406188795436</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">168.71639805200903</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">82</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">15302.164905145011</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">148.75871634957548</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">83</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">15432.975143797978</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">130.8102386529663</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">84</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">15547.731232522778</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">114.75608872480007</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">85</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">15648.195154005616</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">100.46392148283849</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">86</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">15735.987538230782</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">87.79238422516573</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">87</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">15812.585137805316</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">76.59759957453389</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">88</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">15879.323077554804</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">66.73793974948785</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">89</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">15937.400458565931</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">58.07738101112773</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">90</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">15987.88817537755</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">50.48771681161816</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">91</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16031.73805638461</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">43.84988100706141</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">92</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16069.792653939887</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">38.054597555275905</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">93</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16102.79519032689</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">33.00253638700269</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">94</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16131.39931056487</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">28.60412023798017</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">95</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16156.178406650699</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">24.779096085829224</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">96</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16177.634364889715</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">21.455958239015672</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">97</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16196.205653045186</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">18.571288155471848</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">98</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16212.27471144659</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">16.0690584014028</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">99</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16226.174645722553</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">13.89993427596346</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">100</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16238.195241659725</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">12.020595937172402</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">101</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16248.58833745445</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">10.393095794725014</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">102</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16257.572597417045</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">8.984259962595388</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">103</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16265.33773565599</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">7.765138238944928</span>
+<span class="n">Day</span> <span class="k">from</span> <span class="n">now</span><span class="o">=</span><span class="mi">104</span> <span class="n">CumSum</span><span class="o">=</span><span class="mf">16272.048239680134</span> <span class="n">Delta</span><span class="o">=</span><span class="mf">6.710504024144029</span></code></pre></figure>
+
+<!-- ***************************************************************************** -->
+
+<!-- *************** Showing the python table of the code  ********************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- ***************************************************************************** -->
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"></code></pre></figure>
+
+<!-- *************** Showing the python table of the code  ********************** -->
+
+<!-- ***************************************************************************** -->
+
+<!-- ***************************************************************************** -->
+
+
+
+<script src="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/js/clipboard.min.js"></script>
+<script src="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/js/copy.js"></script>
+
+<hr>
+
+				<!--
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="https:/mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/GrowthFactor_Function/" data-toggle="tooltip" data-placement="top" title="Growth Factor Function">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="https:/mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPredictin/" data-toggle="tooltip" data-placement="top" title="Model Predictin">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                -->
+
+            </div>
+        </div>
+    </div>
+</article>
+	
+    <!-- Footer -->
+<footer>
+   <div class="container">
+      <div class="row no-print">
+         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <ul class="list-inline text-center">
+               <!-- Research Gate Stuff -->
+               
+               <li>
+                  <a href="https://www.researchgate.net/profile/Mario_Garingo">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-researchgate fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+               </li>
+               
+               <!-- Other Project Site stuff -->
+               
+               <li>
+                  <a href="http://youeeg.net/mgProjectPages/">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+               </li>
+               
+               <!-- Github Stuff stuff -->
+               
+               <li>
+                  <a href="https://github.com/mgaringoDev/myOntarioCovidModelTrendAnalysis">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+               </li>
+               
+               <!-- Github Stuff stuff -->
+               
+               <li>
+                  <a href="https://mgaringodev.github.io/">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+               </li>
+               
+            </ul>
+            <p class="copyright text-muted"> Copyright © <a href="https://mgaringodev.github.io/" target="_blank">Mario Garingo</a>, 2020. </p>
+         </div>
+      </div>
+   </div>
+</footer>
+
+</body>
+
+</html>

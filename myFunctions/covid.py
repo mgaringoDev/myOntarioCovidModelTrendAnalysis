@@ -4,15 +4,99 @@ import pickle
 import os
 import numpy as np
 
+# ---------- Utilities for Logistic Regression
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+import scipy.optimize as opt
+from sklearn.preprocessing import MinMaxScaler
+# -----------
+
+# ---------- Utilities for Growth Rates
+from datetime import date, timedelta
+# -----------
+
+# modeling
+def logistic(x, a, c, d):
+    """Fit a logistic function."""
+    return a / (1. + np.exp(-c * (x - d)))
+
+
+def fit_predict(x, y, f, x_pred=None):
+    """Fit a function and predict on some input"""
+    popt, pcov = opt.curve_fit(f, x, y, maxfev=100000)
+    if x_pred is None:
+        x_pred = x
+    return f(x_pred, *popt)
+#
+
 class covid():
     
     data = []
     dataProvince = 'Ontario'
     dataProcess = []
+    dfData = []    
 
     def __init__(self,cached=False):
         print('Getting COVID data')
         self.data = self.getData(cached)
+        
+    def dispGrowthFactor(self):
+        dfData = self.dfData
+        dfGrowthFactor = dfData['contracted'].diff()/dfData['contracted'].diff().shift(freq="D")
+        dfGrowthFactor = dfGrowthFactor.fillna(1)
+        
+        # look at weekly growth factor
+        dfGrowthFactorWeekly = dfGrowthFactor.rolling(7).mean()
+        
+        # get range of dates
+        startDate = date(2020, 3, 14)
+        endDate = date.today()
+        
+        dfGrowthFactorWeekly = dfGrowthFactorWeekly[startDate:endDate].fillna(1)
+        
+        dfGrowthFactorWeekly.plot()
+        
+        gf = dfGrowthFactorWeekly[endDate-timedelta(days=4)]
+        trendGf = dfGrowthFactorWeekly[endDate-timedelta(days=4)]
+        print(f"The current growth rate is {gf} while the 7 day trend growth rate is {trendGf}")
+        
+    def dispCurve(self,lenPred=30,showPredict=False):
+        y = self.dfData['contracted'].to_numpy()
+        x = np.arange(len(y))
+        lenPred = 30
+        xFuture = np.arange(lenPred) + len(x)
+        
+        # fit the model
+        m = MinMaxScaler()
+        yTrans = m.fit_transform(y.reshape(-1, 1) )
+        yTrans = yTrans.reshape(1, -1)[0]
+        yPredLogReg = fit_predict(x, yTrans, logistic, x_pred=xFuture).reshape(-1, 1)
+        yPredLogReg = m.inverse_transform(yPredLogReg).reshape(1, -1)[0]
+        
+        ### Plot
+        plt.scatter(x, y)
+        #plt.plot(x, Y_pred_weighted,label='Weighted')
+        plt.plot(xFuture, yPredLogReg,'r',label='Prediction')
+        plt.xlabel('Days since record')
+        plt.ylabel('Cases')
+        plt.legend()
+
+        plt.show()
+        
+        if showPredict:
+            cur = 0
+            prev = 0
+            delta = 0
+
+            for xVal,yVal in zip(xFuture,yPredLogReg):
+                prev = cur
+                cur = yVal
+                print('Day from now={} CumSum={} Delta={}'.format(xVal,
+                                                                 yVal,
+                                                                 np.abs(cur-prev)))
+
+
+            
     
     def getData(self,cached=False):
         urlCases = 'https://raw.githubusercontent.com/ishaberry/Covid19Canada/master/cases.csv'

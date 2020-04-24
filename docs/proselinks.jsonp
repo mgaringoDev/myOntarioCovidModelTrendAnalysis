@@ -261,8 +261,23 @@ callback([
   } ,
 
   {
+    "text": "Growth Factor Function",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/GrowthFactor_Function/"
+  } ,
+
+  {
+    "text": "Log Regression Function",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/LogRegression_Function/"
+  } ,
+
+  {
     "text": "Model Predictin",
     "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPredictin/"
+  } ,
+
+  {
+    "text": "Model Prediction",
+    "href": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPrediction/"
   } 
 
 ])

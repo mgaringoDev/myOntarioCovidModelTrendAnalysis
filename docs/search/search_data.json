@@ -1,10 +1,40 @@
 {
   
 
+    "project1-2020-04-24-modelprediction": {
+      "title": "Model Prediction",
+      "content"	 : "",
+      "url": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPrediction/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
     "project1-2020-04-24-modelpredictin": {
       "title": "Model Predictin",
       "content"	 : "",
       "url": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPredictin/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-24-logregression-function": {
+      "title": "Log Regression Function",
+      "content"	 : "",
+      "url": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/LogRegression_Function/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-24-growthfactor-function": {
+      "title": "Growth Factor Function",
+      "content"	 : "",
+      "url": "https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/GrowthFactor_Function/",
       "author": "Mario Garingo",
       "categories": "project1"
     }

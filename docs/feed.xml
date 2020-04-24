@@ -5,9 +5,24 @@
     <description>This is just a place where I can do some analysis on the COVID data.</description>
     <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/</link>
     <atom:link href="https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 24 Apr 2020 13:09:14 -0400</pubDate>
-    <lastBuildDate>Fri, 24 Apr 2020 13:09:14 -0400</lastBuildDate>
+    <pubDate>Fri, 24 Apr 2020 16:29:27 -0400</pubDate>
+    <lastBuildDate>Fri, 24 Apr 2020 16:29:27 -0400</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Model Prediction</title>
+        <description>
+</description>
+        <pubDate>Fri, 24 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPrediction/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPrediction/</guid>
+        
+        <category>jupyter</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
     
       <item>
         <title>Model Predictin</title>
@@ -16,6 +31,36 @@
         <pubDate>Fri, 24 Apr 2020 00:00:00 -0400</pubDate>
         <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPredictin/</link>
         <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/ModelPredictin/</guid>
+        
+        <category>jupyter</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Log Regression Function</title>
+        <description>
+</description>
+        <pubDate>Fri, 24 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/LogRegression_Function/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/LogRegression_Function/</guid>
+        
+        <category>jupyter</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Growth Factor Function</title>
+        <description>
+</description>
+        <pubDate>Fri, 24 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/GrowthFactor_Function/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/24/GrowthFactor_Function/</guid>
         
         <category>jupyter</category>
         
@@ -387,122 +432,6 @@ M. Y. Li and J. S. Muldowney, “Global stability for the SEIR model in epidemio
         <category>model</category>
         
         <category>SEIR</category>
-        
-        
-        <category>project1</category>
-        
-      </item>
-    
-      <item>
-        <title>Testing Modeling Assumptions in the West Africa Ebola Outbreak</title>
-        <description>
-
-
-
-      Table of Contents
-
-  Extracted Annotations
-  Ref
-
-
-    
-
-
-
-
-Overall very simple to read and follow.  They show that simple models can sometimes give adequite results and give guidance of what to do next.
-
-
-
-
-
-
-
-where a is the infectious rate and $\beta$ is the recovery rate.  Notice that the infectious rate is a function as the model states assumes decreasingly infectious.
-
-Extracted Annotations
-
-“In the SI model, 100% of individuals are eventually infected, therefore, to find agreement with data, our model has to assume a small proportion of individuals in each division are susceptible to the disease.” (Burghardt et al 2016:34601)
-
-“more likely, all individuals are susceptible and, as they become aware of an infection, they reduce their interactions or otherwise reduce the overall disease transmissibility.” (Burghardt et al 2016:34601)
-
-“disease model, in which susceptible (s) individuals can become infected (i), but then recover or are removed” (Burghardt et al 2016:34602)
-
-“SDIR” (Burghardt et al 2016:34602)
-
-“all individuals who recovered or died were assumed to be “removed”. The SIR model, like the SI model, significantly overshoots the cumulative number of cases in the absence of intervention. We counter-balance this effect with an exponentially decreasing disease transmissibility as a result of public health interventions18,19. We call this model the Susceptible - Decreasingly Infectious - Recovered (SDIR) model.” (Burghardt et al 2016:34602)
-
-Ref
-
-[1]K. Burghardt, C. Verzijl, J. Huang, M. Ingram, B. Song, and M.-P. Hasne, “Testing Modeling Assumptions in the West Africa Ebola Outbreak,” Sci Rep, vol. 6, no. 1, p. 34598, Dec. 2016, doi: 10.1038/srep34598.
-
-
-</description>
-        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SDIR_TestingModelingAssumptionsInTheWestAfricaEbolaOutbreak/</link>
-        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/SDIR_TestingModelingAssumptionsInTheWestAfricaEbolaOutbreak/</guid>
-        
-        <category>litReview</category>
-        
-        <category>model</category>
-        
-        <category>SDIR</category>
-        
-        
-        <category>project1</category>
-        
-      </item>
-    
-      <item>
-        <title>Influenza models with Wolfram Mathematica</title>
-        <description>
-
-
-
-      Table of Contents
-
-  Ref
-
-
-    
-
-
-
-
-Look at the following to setup the differential equations.  The article is basically like a tutorial on how to implement various things in R.  But we can use the images below to help us create a differential equation in python.
-
-
-
-
-Ref
-
-D. H. Knipl and G. Röst, “Influenza models with Wolfram Mathematica,” p. 22.
-
-</description>
-        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/InfluenzaModelsWithWolframMathematica/</link>
-        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/InfluenzaModelsWithWolframMathematica/</guid>
-        
-        <category>litReview</category>
-        
-        <category>model</category>
-        
-        <category>SEAIR</category>
-        
-        
-        <category>project1</category>
-        
-      </item>
-    
-      <item>
-        <title>Trend Lines</title>
-        <description>
-</description>
-        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
-        <link>https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/TrendLines_fbprophet/</link>
-        <guid isPermaLink="true">https://mgaringodev.github.io/myOntarioCovidModelTrendAnalysis/project1/2020/04/22/TrendLines_fbprophet/</guid>
-        
-        <category>jupyter</category>
         
         
         <category>project1</category>
