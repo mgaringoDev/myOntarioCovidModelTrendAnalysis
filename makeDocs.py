@@ -91,35 +91,69 @@ def getTitle(filename):
         title = title + ' '+word.capitalize()
     return title
 
-def main():
-	srcLocation, fileNames = getListOfJupyterNotebooks()
-	dstLocation = getDstLocation()
-	notesLocation = getNotesDstLocation()
 
-	for fileName in fileNames:
+def createJSONFiles():
+    print('Now creating JSON files')
+    srcLocation, fileNames = getListOfJupyterNotebooks()
+    dstLocation = getDstLocation()
+    notesLocation = getNotesDstLocation()
+
+    for fileName in fileNames:
     
-	    # Copy the file
-	    copyFile(srcLocation,dstLocation,fileName)
-	    
-	    srcFile = srcLocation+fileName + '.ipynb'
-	    dstFile = dstLocation+fileName + '.json'
-	    mdFileName = notesLocation+modificationDate(srcLocation+fileName+'.ipynb')+fileName+'.md'
-	    
-	    # Create post
-	    #open file
-	    #get the name (date)
-	    #write file
-	    with open(mdFileName,'w') as mdFile:
-	        mdFile.write('---\n')
-	        mdFile.write('layout:     myNotebookTemp\n')
-	        mdFile.write(f'title:     {getTitle(fileName)}\n')
-	        mdFile.write('author:     Mario Garingo\n')
-	        mdFile.write(f'tags:     {getTags(srcFile)}\n')
-	        mdFile.write(f'description:     {getDescription(srcFile)}\n')
-	        mdFile.write('category:     project1\n')
-	        mdFile.write('type:     codes\n')
-	        mdFile.write(f'notebookfilename:     {fileName}\n')
-	        mdFile.write('---\n')
+        # Copy the file
+        copyFile(srcLocation,dstLocation,fileName)
+        
+        srcFile = srcLocation+fileName + '.ipynb'
+        dstFile = dstLocation+fileName + '.json'
+        mdFileName = notesLocation+modificationDate(srcLocation+fileName+'.ipynb')+fileName+'.md'
+        
+        # Create post
+        #open file
+        #get the name (date)
+        #write file
+        with open(mdFileName,'w') as mdFile:
+            mdFile.write('---\n')
+            mdFile.write('layout:     myNotebookTemp\n')
+            mdFile.write(f'title:     {getTitle(fileName)}\n')
+            mdFile.write('author:     Mario Garingo\n')
+            mdFile.write(f'tags:     {getTags(srcFile)}\n')
+            mdFile.write(f'description:     {getDescription(srcFile)}\n')
+            mdFile.write('category:     project1\n')
+            mdFile.write('type:     codes\n')
+            mdFile.write(f'notebookfilename:     {fileName}\n')
+            mdFile.write('---\n')
+
+    print('Finished creating JSON files')
+
+def publishGitHubSite():
+    print('Now publishing the site')
+    # get local project notes
+    cwd = os.getcwd()
+    cwdList = cwd.split('\\')[:-2]
+    dst = ''
+    for d in cwdList:
+        dst = dst+d+'/'
+    dst = dst + 'local_projectNotes/'
+
+    try:
+        print('Now changing directories')
+        commandString = "{}".format(dst)
+        os.chdir(commandString)
+
+        print('Generating docs for gitHub')
+        commandString = "jekyll build --config \"_configPublish.yml\""
+        os.system(commandString)
+        print('Finished publishing the site')
+    except Exception as e:
+        print('Something happened in publishing the site')
+        print(e)
+
+
+def main():    
+    #createJSONFiles()
+    publishGitHubSite()
+
+	
 
 if __name__ == '__main__':
 	main()
