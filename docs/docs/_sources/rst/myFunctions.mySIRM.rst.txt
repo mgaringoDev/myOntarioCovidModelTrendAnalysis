@@ -1,0 +1,7 @@
+myFunctions.mySIRM module
+=========================
+
+.. automodule:: myFunctions.mySIRM
+   :members:
+   :undoc-members:
+   :show-inheritance:

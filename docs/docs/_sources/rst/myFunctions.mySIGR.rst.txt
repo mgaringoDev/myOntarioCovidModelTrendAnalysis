@@ -1,0 +1,7 @@
+myFunctions.mySIGR module
+=========================
+
+.. automodule:: myFunctions.mySIGR
+   :members:
+   :undoc-members:
+   :show-inheritance:

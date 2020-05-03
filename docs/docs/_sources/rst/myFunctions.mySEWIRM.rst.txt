@@ -1,0 +1,7 @@
+myFunctions.mySEWIRM module
+===========================
+
+.. automodule:: myFunctions.mySEWIRM
+   :members:
+   :undoc-members:
+   :show-inheritance:

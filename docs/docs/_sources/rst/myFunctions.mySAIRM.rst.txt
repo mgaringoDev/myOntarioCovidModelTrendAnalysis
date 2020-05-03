@@ -1,0 +1,7 @@
+myFunctions.mySAIRM module
+==========================
+
+.. automodule:: myFunctions.mySAIRM
+   :members:
+   :undoc-members:
+   :show-inheritance:

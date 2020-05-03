@@ -1,0 +1,110 @@
+myFunctions package
+===================
+
+Submodules
+----------
+
+myFunctions.covid module
+------------------------
+
+.. automodule:: myFunctions.covid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+myFunctions.myEpiModel module
+-----------------------------
+
+.. automodule:: myFunctions.myEpiModel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+myFunctions.mySAIR module
+-------------------------
+
+.. automodule:: myFunctions.mySAIR
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+myFunctions.mySAIRM module
+--------------------------
+
+.. automodule:: myFunctions.mySAIRM
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+myFunctions.mySDIR module
+-------------------------
+
+.. automodule:: myFunctions.mySDIR
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+myFunctions.mySDIRM module
+--------------------------
+
+.. automodule:: myFunctions.mySDIRM
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+myFunctions.mySEWIRM module
+---------------------------
+
+.. automodule:: myFunctions.mySEWIRM
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+myFunctions.mySIGR module
+-------------------------
+
+.. automodule:: myFunctions.mySIGR
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+myFunctions.mySIGRM module
+--------------------------
+
+.. automodule:: myFunctions.mySIGRM
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+myFunctions.mySIR module
+------------------------
+
+.. automodule:: myFunctions.mySIR
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+myFunctions.mySIRM module
+-------------------------
+
+.. automodule:: myFunctions.mySIRM
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+myFunctions.myVis module
+------------------------
+
+.. automodule:: myFunctions.myVis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: myFunctions
+   :members:
+   :undoc-members:
+   :show-inheritance:

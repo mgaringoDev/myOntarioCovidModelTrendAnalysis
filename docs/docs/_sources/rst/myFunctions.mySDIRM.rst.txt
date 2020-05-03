@@ -1,0 +1,7 @@
+myFunctions.mySDIRM module
+==========================
+
+.. automodule:: myFunctions.mySDIRM
+   :members:
+   :undoc-members:
+   :show-inheritance:

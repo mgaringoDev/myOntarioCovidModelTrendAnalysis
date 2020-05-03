@@ -1,0 +1,7 @@
+myFunctions.mySDIR module
+=========================
+
+.. automodule:: myFunctions.mySDIR
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+myFunctions.mySIR module
+========================
+
+.. automodule:: myFunctions.mySIR
+   :members:
+   :undoc-members:
+   :show-inheritance:

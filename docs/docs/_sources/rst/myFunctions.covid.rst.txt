@@ -1,0 +1,7 @@
+myFunctions.covid module
+========================
+
+.. automodule:: myFunctions.covid
+   :members:
+   :undoc-members:
+   :show-inheritance:

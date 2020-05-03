@@ -1,0 +1,7 @@
+myFunctions.myVis module
+========================
+
+.. automodule:: myFunctions.myVis
+   :members:
+   :undoc-members:
+   :show-inheritance:

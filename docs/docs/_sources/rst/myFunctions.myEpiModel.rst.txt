@@ -1,0 +1,7 @@
+myFunctions.myEpiModel module
+=============================
+
+.. automodule:: myFunctions.myEpiModel
+   :members:
+   :undoc-members:
+   :show-inheritance:

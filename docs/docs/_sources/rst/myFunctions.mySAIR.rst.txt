@@ -1,0 +1,7 @@
+myFunctions.mySAIR module
+=========================
+
+.. automodule:: myFunctions.mySAIR
+   :members:
+   :undoc-members:
+   :show-inheritance:

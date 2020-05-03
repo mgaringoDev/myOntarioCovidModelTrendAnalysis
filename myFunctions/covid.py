@@ -6,6 +6,7 @@ import numpy as np
 
 # ---------- Utilities for Logistic Regression
 from sklearn.linear_model import LinearRegression
+
 import matplotlib.pyplot as plt
 import scipy.optimize as opt
 from sklearn.preprocessing import MinMaxScaler
@@ -17,12 +18,33 @@ from datetime import date, timedelta
 
 # modeling
 def logistic(x, a, c, d):
-    """Fit a logistic function."""
+    """Fit a logistic function.
+    
+    Args:
+        x (list): signal
+        a (float): model parameter a
+        c (float): model parameter c
+        d (float): model parameter d
+    
+    Returns:
+        list: logistic regression of the signal
+    """
     return a / (1. + np.exp(-c * (x - d)))
 
 
 def fit_predict(x, y, f, x_pred=None):
-    """Fit a function and predict on some input"""
+    """Fit a function and predict on some input
+    
+    Args:
+        x (list): signal
+        y (list): signal to fit
+        f (method): function to perform the fitting
+        x_pred (None, optional): signal for prediction
+    
+    Returns:
+        list: predicted signal
+    """
+
     popt, pcov = opt.curve_fit(f, x, y, maxfev=100000)
     if x_pred is None:
         x_pred = x
@@ -30,6 +52,15 @@ def fit_predict(x, y, f, x_pred=None):
 #
 
 class covid():
+
+    """Summary
+    
+    Attributes:
+        data (list): data
+        dataProcess (list): processed data
+        dataProvince (str): province to process
+        dfData (list): data frame of all information
+    """
     
     data = []
     dataProvince = 'Ontario'
@@ -37,10 +68,15 @@ class covid():
     dfData = []    
 
     def __init__(self,cached=False):
+        """Initializing constructor
+        
+        Args:
+            cached (bool, optional): Flag to either get the data or get it from local memory
+        """
         print('Getting COVID data')
         self.data = self.getData(cached)
         
-    def dispGrowthFactor(self):
+    def dispGrowthFactor(self):        
         dfData = self.dfData
         dfGrowthFactor = dfData['contracted'].diff()/dfData['contracted'].diff().shift(freq="D")
         dfGrowthFactor = dfGrowthFactor.fillna(1)
