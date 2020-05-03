@@ -150,7 +150,7 @@ def publishGitHubSite():
 
 
 def main():    
-    #createJSONFiles()
+    createJSONFiles()
     publishGitHubSite()
 
 	
